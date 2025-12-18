@@ -1,49 +1,40 @@
 const projects = [
   {
-    title: 'E-Commerce Platform',
+    title: 'Online Appointment Scheduler',
     description: 'Full-stack e-commerce solution with payment integration and admin dashboard.',
-    tech: ['React', 'Node.js', 'MongoDB'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
+    github: 'https://github.com/Anjana-05/Prescripto-mern',
+    demo: 'https://prescripto-mern-nu.vercel.app/',
     image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Task Management App',
+    title: 'Personal Expense Tracker',
     description: 'Collaborative task management tool with real-time updates and notifications.',
-    tech: ['Vue.js', 'Express', 'PostgreSQL'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
+    github: 'https://github.com/Anjana-05/Personal-Expense-Tracker',
+    demo: 'https://personal-expense-tracker-mern.vercel.app/',
     image: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Weather Dashboard',
+    title: 'Visitor Gate Pass Management System',
     description: 'Real-time weather information dashboard with location-based forecasts.',
-    tech: ['React', 'API', 'Tailwind'],
-    github: 'https://github.com',
-    demo: null,
+    tech: ['Angular', 'Node.js', 'MongoDB'],
+    github: 'https://github.com/Anjana-05/Visitor-GatePass-Management-System',
     image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Blog Platform',
+    title: 'Online Food Delivery System',
     description: 'Content management system for creating and managing blog posts.',
-    tech: ['Django', 'PostgreSQL', 'HTML/CSS'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    tech: ['HTML/CSS'],
+    github: 'https://github.com/Anjana-05/Yummy-Spot',
+    demo: 'https://anjana-05.github.io/Yummy-Spot/index.html',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    title: 'Social Media API',
-    description: 'RESTful API for social media features with authentication and authorization.',
-    tech: ['Node.js', 'MongoDB', 'JWT'],
-    github: 'https://github.com',
-    demo: null,
-    image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=800&q=80'
   },
   {
     title: 'Portfolio Website',
     description: 'Personal portfolio website showcasing projects and skills.',
-    tech: ['React', 'Tailwind CSS', 'Vite'],
-    github: 'https://github.com',
+    tech: ['React', 'Tailwind CSS'],
+    github: 'https://github.com/Anjana-05/Personal-Portfolio',
     demo: 'https://demo.com',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
   }
@@ -51,19 +42,19 @@ const projects = [
 
 function ProjectCard({ project }) {
   return (
-    <div className="group bg-white border border-[#E5E7EB] rounded-2xl overflow-hidden transition-all duration-200 ease-out hover:shadow-md hover:shadow-[#E5E7EB]/70 hover:scale-[1.01]">
+    <div className="group bg-black/40 border border-purple-500/20 rounded-2xl overflow-hidden transition-all duration-200 ease-out hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] hover:border-purple-400/50">
       <div className="relative overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
-          className="h-48 w-full object-cover transition duration-300 ease-out group-hover:scale-105 group-hover:opacity-95"
+          className="h-48 w-full object-cover transition duration-300 ease-out group-hover:scale-110 group-hover:opacity-80"
           loading="lazy"
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/10 to-slate-950/60 opacity-0 group-hover:opacity-100 transition duration-300 ease-out" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-purple-950/80 opacity-0 group-hover:opacity-100 transition duration-300 ease-out" />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-[#0B1220] flex items-center gap-2">
-          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#EFF6FF] text-[#2563EB] border border-[#E5E7EB] group-hover:scale-105 transition-transform duration-200">
+        <h3 className="text-xl font-semibold mb-2 text-white flex items-center gap-2">
+          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-purple-950/60 text-purple-400 border border-purple-500/30 group-hover:scale-110 group-hover:bg-purple-900/60 transition-transform duration-200">
             {/* spark icon */}
             <svg
               viewBox="0 0 24 24"
@@ -80,12 +71,12 @@ function ProjectCard({ project }) {
           </span>
           {project.title}
         </h3>
-        <p className="text-[#4B5563] mb-4 text-sm leading-relaxed">{project.description}</p>
+        <p className="text-gray-300 mb-4 text-base leading-relaxed">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tech.map((item) => (
             <span
               key={item}
-              className="px-2.5 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-[0.68rem] tracking-wide uppercase"
+              className="px-2.5 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-xs tracking-wide uppercase hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200"
             >
               {item}
             </span>
@@ -96,10 +87,10 @@ function ProjectCard({ project }) {
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="group/btn inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2563EB] text-white text-xs font-semibold tracking-wide hover:bg-[#1D4ED8] hover:scale-[1.01] transition-all duration-200 ease-out"
+            className="group/btn inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-violet-600 text-white text-sm font-semibold tracking-wide hover:from-purple-500 hover:to-violet-500 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-200 ease-out"
           >
             <span>GitHub</span>
-            <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#1D4ED8] text-white group-hover/btn:translate-x-0.5 transition-transform duration-150">
+            <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-purple-700 text-white group-hover/btn:translate-x-0.5 group-hover/btn:scale-110 transition-transform duration-150">
               <svg
                 viewBox="0 0 24 24"
                 className="h-3 w-3"
@@ -119,10 +110,10 @@ function ProjectCard({ project }) {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-            className="group/btn inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#E5E7EB] bg-white text-[#0B1220] text-xs font-semibold tracking-wide hover:bg-[#F4F6F8] hover:border-[#D1D5DB] hover:scale-[1.01] transition-all duration-200 ease-out"
+            className="group/btn inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/30 bg-black/40 text-white text-sm font-semibold tracking-wide hover:bg-purple-950/60 hover:border-purple-400 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-200 ease-out"
             >
               <span>Live Demo</span>
-              <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#F4F6F8] text-[#2563EB] group-hover/btn:translate-x-0.5 transition-transform duration-150">
+              <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-purple-950/60 text-purple-400 group-hover/btn:translate-x-0.5 group-hover/btn:scale-110 transition-transform duration-150">
                 <svg
                   viewBox="0 0 24 24"
                   className="h-3 w-3"
@@ -149,16 +140,16 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="pt-24 pb-20 bg-[#FAFAFA]"
+      className="pt-24 pb-20 bg-gradient-to-b from-black via-purple-950/10 to-black"
     >
       <div className="container mx-auto px-4">
         <div className="mb-10 flex items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-[#EFF6FF] px-3 py-1 text-xs font-semibold text-[#2563EB]">
-              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
-              <span className="uppercase tracking-[0.18em] text-[0.68rem]">Selected work</span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-950/40 px-3 py-1.5 text-sm font-semibold text-purple-300 hover:border-purple-400 hover:bg-purple-950/60 transition-all duration-200">
+              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse" />
+              <span className="uppercase tracking-[0.18em] text-xs">Selected work</span>
             </div>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-[#0B1220]">Projects</h2>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">Projects</h2>
           </div>
         </div>
 

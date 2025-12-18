@@ -2,22 +2,22 @@
 @import "tailwindcss";
 
 :root {
-  /* Theme tokens (edit these to match your reference image palette) */
-  --c-page: 241 245 249; /* slate-100-ish */
-  --c-section: 248 250 252; /* near-white */
-  --c-surface: 255 255 255; /* #FFFFFF */
+  /* Dark theme with violet/purple accents */
+  --c-page: 0 0 0; /* black */
+  --c-section: 10 10 15; /* very dark gray */
+  --c-surface: 20 20 30; /* dark gray */
 
-  --c-ink: 15 23 42; /* slate-900 */
-  --c-text: 71 85 105; /* slate-600 */
-  --c-muted: 51 65 85; /* slate-700 */
+  --c-ink: 255 255 255; /* white */
+  --c-text: 230 230 240; /* light gray-white */
+  --c-muted: 200 200 210; /* muted white */
 
-  --c-border: 226 232 240; /* slate-200 */
-  --c-border-strong: 203 213 225; /* slate-300 */
+  --c-border: 40 30 60; /* dark purple-gray */
+  --c-border-strong: 60 40 80; /* purple-gray */
 
-  /* violet/purple accent (like reference) */
+  /* violet/purple accent */
   --c-primary: 139 92 246; /* violet-500 */
-  --c-primary-hover: 124 58 237; /* violet-600 */
-  --c-primary-soft: 245 243 255; /* violet-50 */
+  --c-primary-hover: 167 139 250; /* violet-400 */
+  --c-primary-soft: 60 30 100; /* dark violet */
 }
 
 html {
@@ -30,6 +30,8 @@ body {
   color: rgb(var(--c-text));
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 @keyframes fade-up {

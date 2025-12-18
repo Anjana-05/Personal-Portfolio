@@ -2,16 +2,16 @@ function Achievements() {
   return (
     <section
       id="achievements"
-      className="pt-24 pb-20 bg-[#F4F6F8]"
+      className="pt-24 pb-20 bg-gradient-to-b from-black via-purple-950/10 to-black"
     >
       <div className="container mx-auto px-4">
         <div className="mb-10 flex items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-[#EFF6FF] px-3 py-1 text-xs font-semibold text-[#2563EB]">
-              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
-              <span className="uppercase tracking-[0.18em] text-[0.68rem]">Highlights</span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-950/40 px-3 py-1.5 text-sm font-semibold text-purple-300 hover:border-purple-400 hover:bg-purple-950/60 transition-all duration-200">
+              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse" />
+              <span className="uppercase tracking-[0.18em] text-xs">Highlights</span>
             </div>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-[#0B1220]">Achievements</h2>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">Achievements</h2>
           </div>
         </div>
 
@@ -26,10 +26,10 @@ function Achievements() {
           ].map((text, index) => (
             <div
               key={text}
-              className={`flex items-start gap-3 bg-white border border-[#E5E7EB] p-4 rounded-2xl transition-all duration-200 ease-out hover:shadow-md hover:shadow-[#E5E7EB]/70 hover:scale-[1.01] opacity-0 translate-y-3 animate-[fade-up_${0.6 +
+              className={`flex items-start gap-3 bg-black/40 border border-purple-500/20 p-5 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] hover:border-purple-400/50 opacity-0 translate-y-3 animate-[fade-up_${0.6 +
                 index * 0.05}s_ease-out_forwards]`}
             >
-              <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#EFF6FF] text-[#2563EB] border border-[#E5E7EB]">
+              <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-purple-950/60 text-purple-400 border border-purple-500/30 hover:bg-purple-900/60 hover:scale-110 transition-all duration-200">
                 {/* trophy icon */}
                 <svg
                   viewBox="0 0 24 24"
@@ -48,7 +48,7 @@ function Achievements() {
                   <path d="M17 4h2a2 2 0 0 1 2 2v1a3 3 0 0 1-3 3" />
                 </svg>
               </span>
-              <p className="text-[#4B5563] text-sm leading-relaxed">{text}</p>
+              <p className="text-gray-300 text-base leading-relaxed">{text}</p>
             </div>
           ))}
         </div>
