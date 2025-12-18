@@ -1,0 +1,67 @@
+@config "../tailwind.config.js";
+@import "tailwindcss";
+
+:root {
+  /* Theme tokens (edit these to match your reference image palette) */
+  --c-page: 241 245 249; /* slate-100-ish */
+  --c-section: 248 250 252; /* near-white */
+  --c-surface: 255 255 255; /* #FFFFFF */
+
+  --c-ink: 15 23 42; /* slate-900 */
+  --c-text: 71 85 105; /* slate-600 */
+  --c-muted: 51 65 85; /* slate-700 */
+
+  --c-border: 226 232 240; /* slate-200 */
+  --c-border-strong: 203 213 225; /* slate-300 */
+
+  /* violet/purple accent (like reference) */
+  --c-primary: 139 92 246; /* violet-500 */
+  --c-primary-hover: 124 58 237; /* violet-600 */
+  --c-primary-soft: 245 243 255; /* violet-50 */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(var(--c-page));
+  color: rgb(var(--c-text));
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(14px, -18px) scale(1.04);
+  }
+  66% {
+    transform: translate(-10px, 12px) scale(0.98);
+  }
+}
