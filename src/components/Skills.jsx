@@ -2,22 +2,22 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="pt-24 pb-20 bg-gradient-to-b from-black via-purple-950/10 to-black"
+      className="pt-24 pb-20 bg-[#F4F6F8]"
     >
       <div className="container mx-auto px-4">
         <div className="mb-10 flex items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-950/40 px-3 py-1.5 text-sm font-semibold text-purple-300 hover:border-purple-400 hover:bg-purple-950/60 transition-all duration-200">
-              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse" />
-              <span className="uppercase tracking-[0.18em] text-xs">Tech stack</span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-[#EFF6FF] px-3 py-1 text-xs font-semibold text-[#2563EB]">
+              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
+              <span className="uppercase tracking-[0.18em] text-[0.68rem]">Tech stack</span>
             </div>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">Skills</h2>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-[#0B1220]">Skills</h2>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-black/40 border border-purple-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] hover:border-purple-400/50">
-            <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-purple-950/60 text-purple-400 border border-purple-500/30 hover:bg-purple-900/60 hover:scale-110 transition-all duration-200">
+          <div className="bg-white border border-[#E5E7EB] p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-md hover:shadow-[#E5E7EB]/70 hover:scale-[1.01]">
+            <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#EFF6FF] text-[#2563EB] border border-[#E5E7EB]">
               {/* curly braces icon */}
               <svg
                 viewBox="0 0 24 24"
@@ -32,25 +32,28 @@ function Skills() {
                 <path d="M15 3c2 0 3 1 3 3v2c0 1 1 2 2 2-1 0-2 1-2 2v2c0 2-1 3-3 3" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-3 text-white">Programming Languages</h3>
+            <h3 className="text-xl font-semibold mb-3 text-[#0B1220]">Programming Languages</h3>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
-                Java
-              </span>
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
-                C
-              </span>
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
                 JavaScript
               </span>
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
+                TypeScript
+              </span>
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
+                Python
+              </span>
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
+                Java
+              </span>
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
                 C++
               </span>
             </div>
           </div>
 
-          <div className="bg-black/40 border border-purple-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] hover:border-purple-400/50">
-            <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-purple-950/60 text-purple-400 border border-purple-500/30 hover:bg-purple-900/60 hover:scale-110 transition-all duration-200">
+          <div className="bg-white border border-[#E5E7EB] p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-md hover:shadow-[#E5E7EB]/70 hover:scale-[1.01]">
+            <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#EFF6FF] text-[#2563EB] border border-[#E5E7EB]">
               {/* monitor icon */}
               <svg
                 viewBox="0 0 24 24"
@@ -67,25 +70,28 @@ function Skills() {
                 <path d="M12 17v4" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-3 text-white">Frontend</h3>
+            <h3 className="text-xl font-semibold mb-3 text-[#0B1220]">Frontend</h3>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
-                HTML
-              </span>
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
-                CSS
-              </span>
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
                 React
               </span>
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
+                Vue.js
+              </span>
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
+                HTML
+              </span>
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
+                CSS
+              </span>
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
                 Tailwind CSS
               </span>
             </div>
           </div>
 
-          <div className="bg-black/40 border border-purple-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] hover:border-purple-400/50">
-            <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-purple-950/60 text-purple-400 border border-purple-500/30 hover:bg-purple-900/60 hover:scale-110 transition-all duration-200">
+          <div className="bg-white border border-[#E5E7EB] p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-md hover:shadow-[#E5E7EB]/70 hover:scale-[1.01]">
+            <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#EFF6FF] text-[#2563EB] border border-[#E5E7EB]">
               {/* server icon */}
               <svg
                 viewBox="0 0 24 24"
@@ -102,22 +108,28 @@ function Skills() {
                 <path d="M7 7h.01M7 17h.01" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-3 text-white">Backend</h3>
+            <h3 className="text-xl font-semibold mb-3 text-[#0B1220]">Backend</h3>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
                 Node.js
               </span>
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
                 Express
               </span>
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
+                Django
+              </span>
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
+                Flask
+              </span>
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
                 REST API
               </span>
             </div>
           </div>
 
-          <div className="bg-black/40 border border-purple-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] hover:border-purple-400/50">
-            <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-purple-950/60 text-purple-400 border border-purple-500/30 hover:bg-purple-900/60 hover:scale-110 transition-all duration-200">
+          <div className="bg-white border border-[#E5E7EB] p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-md hover:shadow-[#E5E7EB]/70 hover:scale-[1.01]">
+            <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#EFF6FF] text-[#2563EB] border border-[#E5E7EB]">
               {/* database icon */}
               <svg
                 viewBox="0 0 24 24"
@@ -134,19 +146,25 @@ function Skills() {
                 <path d="M5 12c0 1.66 3.13 3 7 3s7-1.34 7-3" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-3 text-white">Databases</h3>
+            <h3 className="text-xl font-semibold mb-3 text-[#0B1220]">Databases</h3>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
                 MongoDB
               </span>
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
+                PostgreSQL
+              </span>
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
                 MySQL
+              </span>
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
+                Firebase
               </span>
             </div>
           </div>
 
-          <div className="bg-black/40 border border-purple-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] hover:border-purple-400/50">
-            <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-purple-950/60 text-purple-400 border border-purple-500/30 hover:bg-purple-900/60 hover:scale-110 transition-all duration-200">
+          <div className="bg-white border border-[#E5E7EB] p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-md hover:shadow-[#E5E7EB]/70 hover:scale-[1.01]">
+            <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#EFF6FF] text-[#2563EB] border border-[#E5E7EB]">
               {/* tools icon */}
               <svg
                 viewBox="0 0 24 24"
@@ -163,15 +181,21 @@ function Skills() {
                 <path d="m12.5 5.5 6 6" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-3 text-white">Tools</h3>
+            <h3 className="text-xl font-semibold mb-3 text-[#0B1220]">Tools</h3>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
                 Git
               </span>
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
+                Docker
+              </span>
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
+                AWS
+              </span>
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
                 VS Code
               </span>
-              <span className="px-3 py-1 bg-purple-950/40 border border-purple-500/20 text-gray-300 rounded-full text-sm hover:bg-purple-900/40 hover:border-purple-400/40 hover:text-white transition-all duration-200">
+              <span className="px-3 py-1 bg-[#F4F6F8] border border-[#E5E7EB] text-[#374151] rounded-full text-xs">
                 Postman
               </span>
             </div>
