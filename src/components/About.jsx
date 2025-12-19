@@ -2,13 +2,13 @@ function About() {
   return (
     <section
       id="about"
-      className="pt-24 pb-20 bg-gradient-to-b from-black via-purple-950/10 to-black"
+      className="pt-24 pb-20 bg-gradient-to-b from-black via-violet-950/10 to-black"
     >
       <div className="container mx-auto px-4">
         <div className="mb-10 flex items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-950/40 px-3 py-1.5 text-sm font-semibold text-purple-300 hover:border-purple-400 hover:bg-purple-950/60 transition-all duration-200">
-              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-950/40 px-3 py-1.5 text-sm font-semibold text-violet-300 hover:border-violet-400 hover:bg-violet-950/60 transition-all duration-200">
+              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-violet-400 animate-pulse" />
               <span className="uppercase tracking-[0.18em] text-xs">Who I am</span>
             </div>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">About Me</h2>
@@ -28,8 +28,8 @@ function About() {
               that provide exceptional user experiences.
             </p>
             <div className="flex flex-wrap gap-3 pt-4">
-              <div className="flex items-center gap-2 px-4 py-2 bg-black/40 border border-purple-500/20 rounded-lg hover:bg-purple-950/40 hover:border-purple-400/40 transition-all duration-200">
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-purple-950/60 text-purple-400 border border-purple-500/30">
+              <div className="flex items-center gap-2 px-4 py-2 bg-black/40 border border-violet-500/20 rounded-lg hover:bg-violet-950/40 hover:border-violet-400/40 transition-all duration-200">
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-violet-950/60 text-violet-400 border border-violet-500/30">
                   <svg
                     viewBox="0 0 24 24"
                     className="h-3 w-3"
@@ -45,8 +45,8 @@ function About() {
                 </span>
                 <span className="text-sm text-gray-300">Problem Solver</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-black/40 border border-purple-500/20 rounded-lg hover:bg-purple-950/40 hover:border-purple-400/40 transition-all duration-200">
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-purple-950/60 text-purple-400 border border-purple-500/30">
+              <div className="flex items-center gap-2 px-4 py-2 bg-black/40 border border-violet-500/20 rounded-lg hover:bg-violet-950/40 hover:border-violet-400/40 transition-all duration-200">
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-violet-950/60 text-violet-400 border border-violet-500/30">
                   <svg
                     viewBox="0 0 24 24"
                     className="h-3 w-3"
@@ -62,8 +62,8 @@ function About() {
                 </span>
                 <span className="text-sm text-gray-300">Team Player</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-black/40 border border-purple-500/20 rounded-lg hover:bg-purple-950/40 hover:border-purple-400/40 transition-all duration-200">
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-purple-950/60 text-purple-400 border border-purple-500/30">
+              <div className="flex items-center gap-2 px-4 py-2 bg-black/40 border border-violet-500/20 rounded-lg hover:bg-violet-950/40 hover:border-violet-400/40 transition-all duration-200">
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-violet-950/60 text-violet-400 border border-violet-500/30">
                   <svg
                     viewBox="0 0 24 24"
                     className="h-3 w-3"
@@ -84,8 +84,8 @@ function About() {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-black/40 border border-purple-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] hover:border-purple-400/50">
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-950/60 text-purple-400 border border-purple-500/30 hover:bg-purple-900/60 hover:scale-110 transition-all duration-200">
+            <div className="bg-black/40 border border-violet-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-violet-500/30 hover:scale-[1.02] hover:border-violet-400/50">
+              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-violet-950/60 text-violet-400 border border-violet-500/30 hover:bg-violet-900/60 hover:scale-110 transition-all duration-200">
                 <svg
                   viewBox="0 0 24 24"
                   className="h-5 w-5"
@@ -103,8 +103,8 @@ function About() {
               <p className="text-gray-300 text-sm">Building projects and solving real-world problems</p>
             </div>
 
-            <div className="bg-black/40 border border-purple-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] hover:border-purple-400/50">
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-950/60 text-purple-400 border border-purple-500/30 hover:bg-purple-900/60 hover:scale-110 transition-all duration-200">
+            <div className="bg-black/40 border border-violet-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-violet-500/30 hover:scale-[1.02] hover:border-violet-400/50">
+              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-violet-950/60 text-violet-400 border border-violet-500/30 hover:bg-violet-900/60 hover:scale-110 transition-all duration-200">
                 <svg
                   viewBox="0 0 24 24"
                   className="h-5 w-5"
@@ -123,8 +123,8 @@ function About() {
               <p className="text-gray-300 text-sm">Computer Science student with honors</p>
             </div>
 
-            <div className="bg-black/40 border border-purple-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] hover:border-purple-400/50">
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-950/60 text-purple-400 border border-purple-500/30 hover:bg-purple-900/60 hover:scale-110 transition-all duration-200">
+            <div className="bg-black/40 border border-violet-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-violet-500/30 hover:scale-[1.02] hover:border-violet-400/50">
+              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-violet-950/60 text-violet-400 border border-violet-500/30 hover:bg-violet-900/60 hover:scale-110 transition-all duration-200">
                 <svg
                   viewBox="0 0 24 24"
                   className="h-5 w-5"
@@ -143,8 +143,8 @@ function About() {
               <p className="text-gray-300 text-sm">Always exploring new technologies</p>
             </div>
 
-            <div className="bg-black/40 border border-purple-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] hover:border-purple-400/50">
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-950/60 text-purple-400 border border-purple-500/30 hover:bg-purple-900/60 hover:scale-110 transition-all duration-200">
+            <div className="bg-black/40 border border-violet-500/20 p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-lg hover:shadow-violet-500/30 hover:scale-[1.02] hover:border-violet-400/50">
+              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-violet-950/60 text-violet-400 border border-violet-500/30 hover:bg-violet-900/60 hover:scale-110 transition-all duration-200">
                 <svg
                   viewBox="0 0 24 24"
                   className="h-5 w-5"

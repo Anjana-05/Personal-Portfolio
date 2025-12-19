@@ -32,7 +32,6 @@ function Navbar() {
   }
 
   const links = [
-    { id: 'home', label: 'Home' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'achievements', label: 'Achievements' },
@@ -40,17 +39,18 @@ function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#E5E7EB]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-neutral-800">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[72px]">
-          <div className="inline-flex items-center gap-2.5">
-            <div className="h-7 w-7 rounded-full bg-[#2563EB] text-white flex items-center justify-center text-xs font-semibold">
+        <div className="flex items-center justify-between h-20">
+          <a
+            href="#home"
+            onClick={(e) => handleClick(e, 'home')}
+            className="inline-flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity"
+          >
+            <div className="h-12 w-12 rounded-full bg-violet-600 text-white flex items-center justify-center text-xl font-bold">
               A
             </div>
-            <span className="text-sm font-semibold tracking-wide text-[#0B1220]">
-              Anjana • Portfolio
-            </span>
-          </div>
+          </a>
 
           <div className="hidden md:flex items-center space-x-8">
             {links.map((link) => {
@@ -62,13 +62,13 @@ function Navbar() {
                   onClick={(e) => handleClick(e, link.id)}
                   className={`relative px-1 py-2 transition-all duration-200 ease-out ${
                     isActive
-                      ? 'text-[#2563EB]'
-                      : 'text-[#4B5563] hover:text-[#0B1220]'
+                      ? 'text-violet-400'
+                      : 'text-gray-400 hover:text-white'
                   }`}
                 >
-                  <span className="text-sm font-medium">{link.label}</span>
+                  <span className="text-lg font-medium">{link.label}</span>
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#2563EB]" />
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-violet-500" />
                   )}
                 </a>
               )

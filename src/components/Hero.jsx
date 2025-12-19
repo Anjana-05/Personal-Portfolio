@@ -2,27 +2,27 @@ function Hero() {
   return (
     <section
       id="home"
-      className="pt-24 pb-16 min-h-screen flex items-center bg-[#FAFAFA]"
+      className="pt-24 pb-16 min-h-screen flex items-center bg-black"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl">
           {/* badge */}
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-[#EFF6FF] px-3 py-1 text-xs font-medium text-[#2563EB]">
-            <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-300">
+            <span className="inline-flex h-1.5 w-1.5 rounded-full bg-violet-400" />
             <span className="uppercase tracking-[0.22em] text-[0.68rem]">
               Open to full‑stack roles
             </span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl leading-tight font-bold mb-3 text-[#0B1220] pb-1">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl leading-tight font-bold mb-3 text-white pb-1">
             Anjana
           </h1>
 
-          <p className="text-lg sm:text-xl text-[#0B1220] mb-4 flex items-center gap-2">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#EFF6FF] border border-[#E5E7EB]">
+          <p className="text-lg sm:text-xl text-gray-200 mb-4 flex items-center gap-2">
+            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-neutral-900 border border-neutral-800">
               {/* laptop-code icon */}
               <svg
-                className="h-4 w-4 text-[#2563EB]"
+                className="h-4 w-4 text-violet-400"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -39,7 +39,7 @@ function Hero() {
             <span>Student, actively looking for a full‑stack developer role</span>
           </p>
 
-          <p className="text-base sm:text-lg text-[#4B5563] mb-9 max-w-2xl">
+          <p className="text-base sm:text-lg text-gray-400 mb-9 max-w-2xl">
             Passionate about crafting delightful, performant web experiences — from pixel‑perfect
             interfaces to scalable backend systems. I love shipping products that feel fast,
             polished, and thoughtfully designed.
@@ -50,10 +50,10 @@ function Hero() {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 bg-[#2563EB] text-white text-sm font-semibold tracking-wide hover:bg-[#1D4ED8] hover:scale-[1.01] transition-all duration-200 ease-out"
+              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 bg-violet-600 text-white text-sm font-semibold tracking-wide hover:bg-violet-700 hover:scale-[1.01] transition-all duration-200 ease-out"
             >
               <span>GitHub</span>
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#1D4ED8] text-white group-hover:translate-x-0.5 transition-transform duration-200">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-violet-700 text-white group-hover:translate-x-0.5 transition-transform duration-200">
                 {/* GitHub mark-like icon */}
                 <svg
                   viewBox="0 0 24 24"
@@ -74,10 +74,10 @@ function Hero() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 border border-[#E5E7EB] bg-white text-[#0B1220] text-sm font-medium tracking-wide hover:bg-[#F4F6F8] hover:border-[#D1D5DB] hover:scale-[1.01] transition-all duration-200 ease-out"
+              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 border border-neutral-800 bg-neutral-900 text-white text-sm font-medium tracking-wide hover:bg-neutral-800 hover:border-neutral-700 hover:scale-[1.01] transition-all duration-200 ease-out"
             >
               <span>LinkedIn</span>
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#F4F6F8] text-[#2563EB] group-hover:translate-x-0.5 transition-transform duration-200">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-neutral-800 text-violet-400 group-hover:translate-x-0.5 transition-transform duration-200">
                 {/* LinkedIn icon */}
                 <svg
                   viewBox="0 0 24 24"
@@ -94,10 +94,10 @@ function Hero() {
               href="https://drive.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 bg-[#2563EB] text-white text-sm font-medium tracking-wide hover:bg-[#1D4ED8] hover:scale-[1.01] transition-all duration-200 ease-out"
+              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 bg-violet-600 text-white text-sm font-medium tracking-wide hover:bg-violet-700 hover:scale-[1.01] transition-all duration-200 ease-out"
             >
               <span>View Resume</span>
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#1D4ED8] text-white group-hover:translate-x-0.5 transition-transform duration-200">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-violet-700 text-white group-hover:translate-x-0.5 transition-transform duration-200">
                 {/* external-link icon */}
                 <svg
                   viewBox="0 0 24 24"
