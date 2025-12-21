@@ -2,22 +2,22 @@
 @import "tailwindcss";
 
 :root {
-  /* Dark theme with violet/purple accents */
-  --c-page: 0 0 0; /* black */
-  --c-section: 10 10 15; /* very dark gray */
-  --c-surface: 20 20 30; /* dark gray */
+  /* Deep Ocean theme */
+  --c-page: 2 12 27; /* Deep Ocean Blue */
+  --c-section: 5 25 45; /* Lighter Ocean Blue */
+  --c-surface: 10 40 70; /* Surface Ocean Blue */
 
-  --c-ink: 255 255 255; /* white */
-  --c-text: 230 230 240; /* light gray-white */
-  --c-muted: 200 200 210; /* muted white */
+  --c-ink: 255 255 255; /* White */
+  --c-text: 240 248 255; /* AliceBlue */
+  --c-muted: 148 163 184; /* Slate-400 */
 
-  --c-border: 40 30 60; /* dark purple-gray */
-  --c-border-strong: 60 40 80; /* purple-gray */
+  --c-border: 30 60 90; /* Ocean Border */
+  --c-border-strong: 50 90 130; /* Strong Ocean Border */
 
-  /* violet/purple accent */
-  --c-primary: 139 92 246; /* violet-500 */
-  --c-primary-hover: 167 139 250; /* violet-400 */
-  --c-primary-soft: 60 30 100; /* dark violet */
+  /* Cyan/Teal accent for Ocean theme */
+  --c-primary: 6 182 212; /* Cyan-500 */
+  --c-primary-hover: 34 211 238; /* Cyan-400 */
+  --c-primary-soft: 12 74 110; /* Sky-900 */
 }
 
 html {

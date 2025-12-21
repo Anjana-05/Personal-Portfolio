@@ -8,7 +8,7 @@ import Contact from './components/Contact.jsx'
 
 function App() {
   return (
-    <div className="min-h-screen bg-black text-gray-300">
+    <div className="min-h-screen bg-page text-text">
       <Navbar />
       <main>
         <Hero />

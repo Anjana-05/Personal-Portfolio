@@ -29,16 +29,16 @@ function CodingProfiles() {
   return (
     <section
       id="coding-profiles"
-      className="pt-24 pb-20 bg-black"
+      className="pt-24 pb-20 bg-page"
     >
       <div className="container mx-auto px-4">
         <div className="mb-10 flex items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-3 py-1 text-xs font-semibold text-violet-300">
-              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-violet-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
               <span className="uppercase tracking-[0.18em] text-[0.68rem]">Competitive coding</span>
             </div>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">Coding Profiles</h2>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink">Coding Profiles</h2>
           </div>
         </div>
 
@@ -48,11 +48,11 @@ function CodingProfiles() {
             href="https://leetcode.com/u/Anjana_baskaran/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 hover:bg-neutral-800 hover:scale-[1.01] transition-all duration-200 ease-out"
+            className="group block bg-section border border-border rounded-2xl p-6 hover:border-border-strong hover:bg-surface hover:scale-[1.01] transition-all duration-200 ease-out"
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-800 text-violet-400 border border-neutral-700 group-hover:scale-110 transition-transform duration-200">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong group-hover:scale-110 transition-transform duration-200">
                   <svg
                     viewBox="0 0 24 24"
                     className="h-6 w-6"
@@ -68,9 +68,9 @@ function CodingProfiles() {
                     <path d="m18 8 3 4-3 4" />
                   </svg>
                 </span>
-                <h3 className="text-xl font-bold text-white">LeetCode</h3>
+                <h3 className="text-xl font-bold text-ink">LeetCode</h3>
               </div>
-              <span className="text-violet-400">
+              <span className="text-primary">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
@@ -89,7 +89,7 @@ function CodingProfiles() {
                     stroke="currentColor"
                     strokeWidth="6"
                     fill="transparent"
-                    className="text-neutral-800"
+                    className="text-surface"
                   />
                   {leetCodeStats && (
                     <>
@@ -133,10 +133,10 @@ function CodingProfiles() {
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="flex items-baseline gap-0.5">
-                    <span className="text-3xl font-bold text-white">
+                    <span className="text-3xl font-bold text-ink">
                       {leetCodeStats ? leetCodeStats.totalSolved : '-'}
                     </span>
-                    <span className="text-xs text-gray-500 font-medium">
+                    <span className="text-xs text-muted font-medium">
                       /{leetCodeStats ? leetCodeStats.totalQuestions : '-'}
                     </span>
                   </div>
@@ -144,44 +144,44 @@ function CodingProfiles() {
                     <svg className="w-3 h-3 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-xs text-gray-400 font-medium">Solved</span>
+                    <span className="text-xs text-muted font-medium">Solved</span>
                   </div>
                 </div>
               </div>
 
               {/* Stats List */}
               <div className="flex-1 w-full space-y-3">
-                <div className="flex flex-col p-3 rounded-xl bg-neutral-800/50 border border-neutral-800 hover:bg-neutral-800 transition-colors">
+                <div className="flex flex-col p-3 rounded-xl bg-surface/50 border border-border hover:bg-surface transition-colors">
                   <span className="text-xs font-medium text-emerald-400 mb-1">Easy</span>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-lg font-bold text-white">
+                    <span className="text-lg font-bold text-ink">
                       {leetCodeStats ? leetCodeStats.easySolved : '-'}
                     </span>
-                    <span className="text-xs text-gray-500">
+                    <span className="text-xs text-muted">
                       /{leetCodeStats ? leetCodeStats.totalEasy : '-'}
                     </span>
                   </div>
                 </div>
 
-                <div className="flex flex-col p-3 rounded-xl bg-neutral-800/50 border border-neutral-800 hover:bg-neutral-800 transition-colors">
+                <div className="flex flex-col p-3 rounded-xl bg-surface/50 border border-border hover:bg-surface transition-colors">
                   <span className="text-xs font-medium text-yellow-400 mb-1">Med.</span>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-lg font-bold text-white">
+                    <span className="text-lg font-bold text-ink">
                       {leetCodeStats ? leetCodeStats.mediumSolved : '-'}
                     </span>
-                    <span className="text-xs text-gray-500">
+                    <span className="text-xs text-muted">
                       /{leetCodeStats ? leetCodeStats.totalMedium : '-'}
                     </span>
                   </div>
                 </div>
 
-                <div className="flex flex-col p-3 rounded-xl bg-neutral-800/50 border border-neutral-800 hover:bg-neutral-800 transition-colors">
+                <div className="flex flex-col p-3 rounded-xl bg-surface/50 border border-border hover:bg-surface transition-colors">
                   <span className="text-xs font-medium text-red-400 mb-1">Hard</span>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-lg font-bold text-white">
+                    <span className="text-lg font-bold text-ink">
                       {leetCodeStats ? leetCodeStats.hardSolved : '-'}
                     </span>
-                    <span className="text-xs text-gray-500">
+                    <span className="text-xs text-muted">
                       /{leetCodeStats ? leetCodeStats.totalHard : '-'}
                     </span>
                   </div>
@@ -195,11 +195,11 @@ function CodingProfiles() {
             href="https://codeforces.com/profile/Anjana_B"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 hover:bg-neutral-800 hover:scale-[1.01] transition-all duration-200 ease-out"
+            className="group block bg-section border border-border rounded-2xl p-6 hover:border-border-strong hover:bg-surface hover:scale-[1.01] transition-all duration-200 ease-out"
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-800 text-violet-400 border border-neutral-700 group-hover:scale-110 transition-transform duration-200">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong group-hover:scale-110 transition-transform duration-200">
                   <svg
                     viewBox="0 0 24 24"
                     className="h-6 w-6"
@@ -211,9 +211,9 @@ function CodingProfiles() {
                     <rect x="16" y="9" width="4" height="8" rx="1" />
                   </svg>
                 </span>
-                <h3 className="text-xl font-bold text-white">Codeforces</h3>
+                <h3 className="text-xl font-bold text-ink">Codeforces</h3>
               </div>
-              <span className="text-violet-400">
+              <span className="text-primary">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
@@ -221,29 +221,29 @@ function CodingProfiles() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-neutral-800/50 rounded-xl p-4 border border-neutral-800">
-                <div className="text-xs text-gray-400 mb-1">Current Rating</div>
-                <div className="text-3xl font-bold text-white">
+              <div className="bg-surface/50 rounded-xl p-4 border border-border">
+                <div className="text-xs text-muted mb-1">Current Rating</div>
+                <div className="text-3xl font-bold text-ink">
                   {codeforcesStats ? codeforcesStats.rating : '-'}
                 </div>
-                <div className="text-xs text-violet-400 mt-1 font-medium capitalize">
+                <div className="text-xs text-primary mt-1 font-medium capitalize">
                   {codeforcesStats ? codeforcesStats.rank : '-'}
                 </div>
               </div>
-              <div className="bg-neutral-800/50 rounded-xl p-4 border border-neutral-800">
-                <div className="text-xs text-gray-400 mb-1">Max Rating</div>
-                <div className="text-3xl font-bold text-white">
+              <div className="bg-surface/50 rounded-xl p-4 border border-border">
+                <div className="text-xs text-muted mb-1">Max Rating</div>
+                <div className="text-3xl font-bold text-ink">
                   {codeforcesStats ? codeforcesStats.maxRating : '-'}
                 </div>
-                <div className="text-xs text-gray-500 mt-1 font-medium capitalize">
+                <div className="text-xs text-muted mt-1 font-medium capitalize">
                   {codeforcesStats ? codeforcesStats.maxRank : '-'}
                 </div>
               </div>
             </div>
 
-            <div className="mt-4 bg-neutral-800/50 rounded-xl p-4 border border-neutral-800 flex items-center justify-between">
-              <div className="text-sm text-gray-400">Organization</div>
-              <div className="text-sm font-medium text-white text-right truncate max-w-[200px]">
+            <div className="mt-4 bg-surface/50 rounded-xl p-4 border border-border flex items-center justify-between">
+              <div className="text-sm text-muted">Organization</div>
+              <div className="text-sm font-medium text-ink text-right truncate max-w-[200px]">
                 {codeforcesStats ? codeforcesStats.organization || 'N/A' : '-'}
               </div>
             </div>

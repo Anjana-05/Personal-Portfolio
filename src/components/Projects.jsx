@@ -1,26 +1,26 @@
 const projects = [
   {
-    title: 'E-Commerce Platform',
+    title: 'Appointment Booking System',
     description: 'Full-stack e-commerce solution with payment integration and admin dashboard.',
-    tech: ['React', 'Node.js', 'MongoDB'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
+    github: 'https://github.com/Anjana-05/Appointix-mern',
+    demo: 'https://prescripto-mern-nu.vercel.app/',
     image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Task Management App',
+    title: 'Personal Expense Tracker',
     description: 'Collaborative task management tool with real-time updates and notifications.',
-    tech: ['Vue.js', 'Express', 'PostgreSQL'],
+    tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
     github: 'https://github.com',
     demo: 'https://demo.com',
     image: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Weather Dashboard',
+    title: 'Personal Expense Tracker',
     description: 'Real-time weather information dashboard with location-based forecasts.',
-    tech: ['React', 'API', 'Tailwind'],
-    github: 'https://github.com',
-    demo: null,
+    tech: ['Angular', 'Tailwind', 'Node.js','MongoDB'],
+    github: 'https://github.com/Anjana-05/Personal-Expense-Tracker',
+    demo: 'https://personal-expense-tracker-mern.vercel.app/',
     image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80'
   },
   {
@@ -32,18 +32,18 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Social Media API',
+    title: 'Yummy Spot - Food Ordering UI',
     description: 'RESTful API for social media features with authentication and authorization.',
     tech: ['Node.js', 'MongoDB', 'JWT'],
-    github: 'https://github.com',
-    demo: null,
+    github: 'https://github.com/Anjana-05/Yummy-Spot',
+    demo: 'https://anjana-05.github.io/Yummy-Spot/',
     image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=800&q=80'
   },
   {
     title: 'Portfolio Website',
     description: 'Personal portfolio website showcasing projects and skills.',
     tech: ['React', 'Tailwind CSS', 'Vite'],
-    github: 'https://github.com',
+    github: 'https://github.com/Anjana-05/Personal-Portfolio',
     demo: 'https://demo.com',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
   }
@@ -51,7 +51,7 @@ const projects = [
 
 function ProjectCard({ project }) {
   return (
-    <div className="group bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden transition-all duration-200 ease-out hover:shadow-md hover:shadow-violet-500/10 hover:scale-[1.01]">
+    <div className="group bg-section border border-border rounded-2xl overflow-hidden transition-all duration-200 ease-out hover:shadow-md hover:shadow-primary/10 hover:scale-[1.01]">
       <div className="relative overflow-hidden">
         <img
           src={project.image}
@@ -62,8 +62,8 @@ function ProjectCard({ project }) {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/60 opacity-0 group-hover:opacity-100 transition duration-300 ease-out" />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-white flex items-center gap-2">
-          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-800 text-violet-400 border border-neutral-700 group-hover:scale-105 transition-transform duration-200">
+        <h3 className="text-xl font-semibold mb-2 text-ink flex items-center gap-2">
+          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-surface text-primary border border-border-strong group-hover:scale-105 transition-transform duration-200">
             {/* spark icon */}
             <svg
               viewBox="0 0 24 24"
@@ -80,12 +80,12 @@ function ProjectCard({ project }) {
           </span>
           {project.title}
         </h3>
-        <p className="text-gray-400 mb-4 text-sm leading-relaxed">{project.description}</p>
+        <p className="text-muted mb-4 text-sm leading-relaxed">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tech.map((item) => (
             <span
               key={item}
-              className="px-2.5 py-1 bg-neutral-800 border border-neutral-700 text-gray-300 rounded-full text-[0.68rem] tracking-wide uppercase"
+              className="px-2.5 py-1 bg-surface border border-border-strong text-text rounded-full text-[0.68rem] tracking-wide uppercase"
             >
               {item}
             </span>
@@ -96,10 +96,10 @@ function ProjectCard({ project }) {
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="group/btn inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-600 text-white text-xs font-semibold tracking-wide hover:bg-violet-700 hover:scale-[1.01] transition-all duration-200 ease-out"
+            className="group/btn inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-white text-xs font-semibold tracking-wide hover:bg-primary-hover hover:scale-[1.01] transition-all duration-200 ease-out"
           >
             <span>GitHub</span>
-            <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-violet-700 text-white group-hover/btn:translate-x-0.5 transition-transform duration-150">
+            <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary-hover text-white group-hover/btn:translate-x-0.5 transition-transform duration-150">
               <svg
                 viewBox="0 0 24 24"
                 className="h-3 w-3"
@@ -119,10 +119,10 @@ function ProjectCard({ project }) {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-            className="group/btn inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-800 bg-neutral-900 text-white text-xs font-semibold tracking-wide hover:bg-neutral-800 hover:border-neutral-700 hover:scale-[1.01] transition-all duration-200 ease-out"
+            className="group/btn inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-section text-ink text-xs font-semibold tracking-wide hover:bg-surface hover:border-border-strong hover:scale-[1.01] transition-all duration-200 ease-out"
             >
               <span>Live Demo</span>
-              <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-neutral-800 text-violet-400 group-hover/btn:translate-x-0.5 transition-transform duration-150">
+              <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-surface text-primary group-hover/btn:translate-x-0.5 transition-transform duration-150">
                 <svg
                   viewBox="0 0 24 24"
                   className="h-3 w-3"
@@ -149,16 +149,16 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="pt-24 pb-20 bg-black"
+      className="pt-24 pb-20 bg-page"
     >
       <div className="container mx-auto px-4">
         <div className="mb-10 flex items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-3 py-1 text-xs font-semibold text-violet-300">
-              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-violet-400" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
               <span className="uppercase tracking-[0.18em] text-[0.68rem]">Selected work</span>
             </div>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">Projects</h2>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink">Projects</h2>
           </div>
         </div>
 

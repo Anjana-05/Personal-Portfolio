@@ -39,7 +39,7 @@ function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-neutral-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-page border-b border-border">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a
@@ -47,7 +47,7 @@ function Navbar() {
             onClick={(e) => handleClick(e, 'home')}
             className="inline-flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity"
           >
-            <div className="h-12 w-12 rounded-full bg-violet-600 text-white flex items-center justify-center text-xl font-bold">
+            <div className="h-12 w-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">
               A
             </div>
           </a>
@@ -62,13 +62,13 @@ function Navbar() {
                   onClick={(e) => handleClick(e, link.id)}
                   className={`relative px-1 py-2 transition-all duration-200 ease-out ${
                     isActive
-                      ? 'text-violet-400'
-                      : 'text-gray-400 hover:text-white'
+                      ? 'text-primary'
+                      : 'text-muted hover:text-ink'
                   }`}
                 >
                   <span className="text-lg font-medium">{link.label}</span>
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-violet-500" />
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
                   )}
                 </a>
               )
