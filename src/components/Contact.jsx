@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -11,6 +10,7 @@ function Contact() {
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null)
+  const [submitError, setSubmitError] = useState('')
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -61,35 +61,47 @@ function Contact() {
 
     setIsSubmitting(true)
     setSubmitStatus(null)
+    setSubmitError('')
 
     try {
-      // EmailJS configuration
-      // Replace these with your EmailJS credentials
-      const serviceId = 'YOUR_SERVICE_ID'
-      const templateId = 'YOUR_TEMPLATE_ID'
-      const publicKey = 'YOUR_PUBLIC_KEY'
-
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        publicKey
-      )
+        body: JSON.stringify(formData),
+      })
+
+      // Safely handle potential empty/non-JSON responses
+      let data = {}
+      const text = await response.text()
+      if (text) {
+        try {
+          data = JSON.parse(text)
+        } catch (parseError) {
+          console.error('Failed to parse JSON from /api/contact:', parseError, 'Response text:', text)
+        }
+      }
+
+      if (!response.ok || !data.success) {
+        const message =
+          data.message ||
+          (response.status >= 500
+            ? 'Server error while sending message. Please try again shortly.'
+            : `Failed to send message (status ${response.status})`)
+        throw new Error(message)
+      }
 
       setSubmitStatus('success')
       setFormData({
         name: '',
         email: '',
         subject: '',
-        message: ''
+        message: '',
       })
     } catch (error) {
-      console.error('EmailJS error:', error)
+      console.error('Contact form error:', error)
+      setSubmitError(error.message || 'Failed to send message.')
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -121,7 +133,7 @@ function Contact() {
             </p>
             <div className="space-y-4">
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:anjanabaskaran2005@gmail.com"
                 className="group flex items-center gap-3 text-muted hover:text-ink transition-all duration-200 ease-out"
               >
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong group-hover:translate-y-[-1px] transition-transform duration-200">
@@ -140,7 +152,7 @@ function Contact() {
                     <path d="m5 8 7 5 7-5" />
                   </svg>
                 </span>
-                <span className="text-sm font-medium">your.email@example.com</span>
+                <span className="text-sm font-medium">anjanabaskaran2005@gmail.com</span>
               </a>
               <a
                 href="https://github.com/Anjana-05"
@@ -166,7 +178,7 @@ function Contact() {
                 <span className="text-sm font-medium">GitHub</span>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/anjana-baskaran/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 text-muted hover:text-ink transition-all duration-200 ease-out"
@@ -268,7 +280,9 @@ function Contact() {
                 <p className="text-green-600 text-xs">Message sent successfully!</p>
               )}
               {submitStatus === 'error' && (
-                <p className="text-red-600 text-xs">Failed to send message. Please try again.</p>
+              <p className="text-red-600 text-xs">
+                {submitError || 'Failed to send message. Please try again.'}
+              </p>
               )}
 
               <button

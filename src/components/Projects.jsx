@@ -1,7 +1,7 @@
 const projects = [
   {
     title: 'Appointment Booking System',
-    description: 'Full-stack e-commerce solution with payment integration and admin dashboard.',
+    description: 'A comprehensive appointment booking system that allows users to schedule, manage, and track appointments with an intuitive interface and admin dashboard.',
     tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
     github: 'https://github.com/Anjana-05/Appointix-mern',
     demo: 'https://prescripto-mern-nu.vercel.app/',
@@ -9,31 +9,15 @@ const projects = [
   },
   {
     title: 'Personal Expense Tracker',
-    description: 'Collaborative task management tool with real-time updates and notifications.',
-    tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
-    image: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    title: 'Personal Expense Tracker',
-    description: 'Real-time weather information dashboard with location-based forecasts.',
+    description: 'An Angular-based expense tracking application that helps users monitor their spending habits, set budgets, and generate detailed financial reports.',
     tech: ['Angular', 'Tailwind', 'Node.js','MongoDB'],
     github: 'https://github.com/Anjana-05/Personal-Expense-Tracker',
     demo: 'https://personal-expense-tracker-mern.vercel.app/',
     image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Blog Platform',
-    description: 'Content management system for creating and managing blog posts.',
-    tech: ['Django', 'PostgreSQL', 'HTML/CSS'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80'
-  },
-  {
     title: 'Yummy Spot - Food Ordering UI',
-    description: 'RESTful API for social media features with authentication and authorization.',
+    description: 'A modern and responsive food ordering user interface that provides an engaging experience for browsing menus, selecting items, and placing orders.',
     tech: ['Node.js', 'MongoDB', 'JWT'],
     github: 'https://github.com/Anjana-05/Yummy-Spot',
     demo: 'https://anjana-05.github.io/Yummy-Spot/',
@@ -41,7 +25,7 @@ const projects = [
   },
   {
     title: 'Portfolio Website',
-    description: 'Personal portfolio website showcasing projects and skills.',
+    description: 'A modern and responsive personal portfolio website built with React and Tailwind CSS, showcasing projects, skills, and professional experience.',
     tech: ['React', 'Tailwind CSS', 'Vite'],
     github: 'https://github.com/Anjana-05/Personal-Portfolio',
     demo: 'https://demo.com',
@@ -52,15 +36,6 @@ const projects = [
 function ProjectCard({ project }) {
   return (
     <div className="group bg-section border border-border rounded-2xl overflow-hidden transition-all duration-200 ease-out hover:shadow-md hover:shadow-primary/10 hover:scale-[1.01]">
-      <div className="relative overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="h-48 w-full object-cover transition duration-300 ease-out group-hover:scale-105 group-hover:opacity-95"
-          loading="lazy"
-        />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/60 opacity-0 group-hover:opacity-100 transition duration-300 ease-out" />
-      </div>
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2 text-ink flex items-center gap-2">
           <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-surface text-primary border border-border-strong group-hover:scale-105 transition-transform duration-200">
