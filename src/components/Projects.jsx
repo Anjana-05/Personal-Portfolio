@@ -18,7 +18,7 @@ const projects = [
   {
     title: 'Yummy Spot - Food Ordering UI',
     description: 'A modern and responsive food ordering user interface that provides an engaging experience for browsing menus, selecting items, and placing orders.',
-    tech: ['Node.js', 'MongoDB', 'JWT'],
+    tech: ['HTML','CSS','JavaScript'],
     github: 'https://github.com/Anjana-05/Yummy-Spot',
     demo: 'https://anjana-05.github.io/Yummy-Spot/',
     image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=800&q=80'
@@ -28,7 +28,7 @@ const projects = [
     description: 'A modern and responsive personal portfolio website built with React and Tailwind CSS, showcasing projects, skills, and professional experience.',
     tech: ['React', 'Tailwind CSS', 'Vite'],
     github: 'https://github.com/Anjana-05/Personal-Portfolio',
-    demo: 'https://demo.com',
+    demo: 'https://personal-portfolio-chi-gold.vercel.app/',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
   }
 ]
