@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState('home')
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,7 @@ function Navbar() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
       setActiveSection(sectionId)
+      setIsMobileMenuOpen(false)
     }
   }
 
@@ -52,6 +54,7 @@ function Navbar() {
             </div>
           </a>
 
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {links.map((link) => {
               const isActive = activeSection === link.id
@@ -74,8 +77,52 @@ function Navbar() {
               )
             })}
           </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-muted hover:text-ink p-2 focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-page border-t border-border">
+          <div className="px-4 pt-2 pb-4 space-y-1">
+            {links.map((link) => {
+              const isActive = activeSection === link.id
+              return (
+                <a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  onClick={(e) => handleClick(e, link.id)}
+                  className={`block px-3 py-3 rounded-md text-base font-medium transition-colors ${
+                    isActive
+                      ? 'text-primary bg-primary/10'
+                      : 'text-muted hover:text-ink hover:bg-surface'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              )
+            })}
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
