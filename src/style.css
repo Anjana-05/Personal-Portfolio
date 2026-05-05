@@ -2,7 +2,26 @@
 @import "tailwindcss";
 
 :root {
-  /* Deep Ocean theme */
+  /* Light theme (default) */
+  --c-page: 250 250 250; /* Light gray background */
+  --c-section: 255 255 255; /* White for sections */
+  --c-surface: 248 250 252; /* Light surface */
+
+  --c-ink: 15 23 42; /* Dark slate for headings */
+  --c-text: 71 85 105; /* Slate for text */
+  --c-muted: 148 163 184; /* Slate-400 for muted text */
+
+  --c-border: 226 232 240; /* Light border */
+  --c-border-strong: 203 213 225; /* Stronger border */
+
+  /* Cyan/Teal accent for both themes */
+  --c-primary: 6 182 212; /* Cyan-500 */
+  --c-primary-hover: 34 211 238; /* Cyan-400 */
+  --c-primary-soft: 12 74 110; /* Sky-900 */
+}
+
+.dark {
+  /* Dark theme */
   --c-page: 2 12 27; /* Deep Ocean Blue */
   --c-section: 5 25 45; /* Lighter Ocean Blue */
   --c-surface: 10 40 70; /* Surface Ocean Blue */
@@ -26,12 +45,37 @@ html {
 
 body {
   margin: 0;
+  padding: 0 1rem;
   background-color: rgb(var(--c-page));
   color: rgb(var(--c-text));
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   font-size: 16px;
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: left;
+  direction: ltr;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 640px) {
+  body {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding: 0 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    padding: 0 6rem;
+  }
 }
 
 @keyframes fade-up {
@@ -55,6 +99,19 @@ body {
   }
 }
 
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
 @keyframes blob {
   0%,
   100% {
@@ -65,5 +122,356 @@ body {
   }
   66% {
     transform: translate(-10px, 12px) scale(0.98);
+  }
+}
+
+/* Enhanced responsive utilities */
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+  
+  h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) and (pointer: coarse) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .group:hover {
+    transform: none !important;
+  }
+  
+  .group:active {
+    transform: scale(0.95) !important;
+  }
+}
+
+/* Smooth scrolling for all browsers */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dynamic viewport height for mobile browsers */
+@supports (height: 100dvh) {
+  .min-h-screen {
+    min-height: 100dvh;
+  }
+}
+
+/* Enhanced focus styles for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid rgb(var(--c-primary));
+  outline-offset: 2px;
+}
+
+/* Loading animations */
+.animate-in {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+/* Responsive grid utilities */
+@media (max-width: 640px) {
+  .responsive-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, 
+    rgb(var(--c-surface)) 25%, 
+    rgb(var(--c-border)) 50%, 
+    rgb(var(--c-surface)) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .bg-page,
+  .bg-section,
+  .bg-surface {
+    background: white !important;
+  }
+  
+  .text-ink,
+  .text-text {
+    color: black !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --c-border: 0 0 0;
+    --c-border-strong: 0 0 0;
+  }
+  
+  .dark {
+    --c-border: 255 255 255;
+    --c-border-strong: 255 255 255;
+  }
+}
+
+/* Global text alignment and spacing fixes */
+* {
+  box-sizing: border-box;
+}
+
+.text-align-left {
+  text-align: left !important;
+}
+
+.text-align-center {
+  text-align: center !important;
+}
+
+.text-align-right {
+  text-align: right !important;
+}
+
+.text-align-justify {
+  text-align: justify !important;
+}
+
+/* Consistent spacing utilities */
+.space-y-1 > * + * {
+  margin-top: 0.25rem;
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+.space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+.space-y-8 > * + * {
+  margin-top: 2rem;
+}
+
+.space-x-1 > * + * {
+  margin-left: 0.25rem;
+}
+
+.space-x-2 > * + * {
+  margin-left: 0.5rem;
+}
+
+.space-x-3 > * + * {
+  margin-left: 0.75rem;
+}
+
+.space-x-4 > * + * {
+  margin-left: 1rem;
+}
+
+.space-x-6 > * + * {
+  margin-left: 1.5rem;
+}
+
+.space-x-8 > * + * {
+  margin-left: 2rem;
+}
+
+/* Container utilities */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Text direction utilities */
+.dir-ltr {
+  direction: ltr;
+}
+
+.dir-rtl {
+  direction: rtl;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+/* Improved line height and spacing */
+p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+/* List spacing */
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+/* Profile image specific styles */
+.profile-image {
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* Image loading optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive image sizing */
+@media (max-width: 640px) {
+  .profile-container {
+    width: 16rem !important;
+    height: 16rem !important;
+  }
+}
+
+@media (min-width: 641px) {
+  .profile-container {
+    width: 20rem !important;
+    height: 20rem !important;
   }
 }

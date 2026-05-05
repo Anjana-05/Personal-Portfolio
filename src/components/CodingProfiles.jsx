@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react'
 
 function CodingProfiles() {
   const [leetCodeStats, setLeetCodeStats] = useState(null)
-  const [codeforcesStats, setCodeforcesStats] = useState(null)
+  const [githubStats, setGithubStats] = useState(null)
 
   useEffect(() => {
     // Fetch LeetCode Stats
-    fetch('https://leetcode-stats-api.herokuapp.com/Anjana_baskaran')
+    fetch('https://leetcodestats.poros.dev/Anjana_baskaran')
       .then(res => res.json())
       .then(data => {
         if (data.status === 'success') {
@@ -15,15 +15,15 @@ function CodingProfiles() {
       })
       .catch(err => console.error('Error fetching LeetCode stats:', err))
 
-    // Fetch Codeforces Stats
-    fetch('https://codeforces.com/api/user.info?handles=Anjana_B')
+    // Fetch GitHub Stats
+    fetch('https://api.github.com/users/Anjana-05')
       .then(res => res.json())
       .then(data => {
-        if (data.status === 'OK' && data.result.length > 0) {
-          setCodeforcesStats(data.result[0])
+        if (data && !data.message) {
+          setGithubStats(data)
         }
       })
-      .catch(err => console.error('Error fetching Codeforces stats:', err))
+      .catch(err => console.error('Error fetching GitHub stats:', err))
   }, [])
 
   return (
@@ -190,9 +190,9 @@ function CodingProfiles() {
             </div>
           </a>
 
-          {/* Codeforces Card */}
+          {/* GitHub Card */}
           <a
-            href="https://codeforces.com/profile/Anjana_B"
+            href="https://github.com/Anjana-05"
             target="_blank"
             rel="noopener noreferrer"
             className="group block bg-section border border-border rounded-2xl p-6 hover:border-border-strong hover:bg-surface hover:scale-[1.01] transition-all duration-200 ease-out"
@@ -206,12 +206,10 @@ function CodingProfiles() {
                     aria-hidden="true"
                     fill="currentColor"
                   >
-                    <rect x="4" y="7" width="4" height="10" rx="1" />
-                    <rect x="10" y="3" width="4" height="14" rx="1" />
-                    <rect x="16" y="9" width="4" height="8" rx="1" />
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                   </svg>
                 </span>
-                <h3 className="text-xl font-bold text-ink">Codeforces</h3>
+                <h3 className="text-xl font-bold text-ink">GitHub</h3>
               </div>
               <span className="text-primary">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -222,29 +220,23 @@ function CodingProfiles() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-surface/50 rounded-xl p-4 border border-border">
-                <div className="text-xs text-muted mb-1">Current Rating</div>
+                <div className="text-xs text-muted mb-1">Public Repos</div>
                 <div className="text-3xl font-bold text-ink">
-                  {codeforcesStats ? codeforcesStats.rating : '-'}
-                </div>
-                <div className="text-xs text-primary mt-1 font-medium capitalize">
-                  {codeforcesStats ? codeforcesStats.rank : '-'}
+                  {githubStats ? githubStats.public_repos : '-'}
                 </div>
               </div>
               <div className="bg-surface/50 rounded-xl p-4 border border-border">
-                <div className="text-xs text-muted mb-1">Max Rating</div>
+                <div className="text-xs text-muted mb-1">Followers</div>
                 <div className="text-3xl font-bold text-ink">
-                  {codeforcesStats ? codeforcesStats.maxRating : '-'}
-                </div>
-                <div className="text-xs text-muted mt-1 font-medium capitalize">
-                  {codeforcesStats ? codeforcesStats.maxRank : '-'}
+                  {githubStats ? githubStats.followers : '-'}
                 </div>
               </div>
             </div>
 
             <div className="mt-4 bg-surface/50 rounded-xl p-4 border border-border flex items-center justify-between">
-              <div className="text-sm text-muted">Organization</div>
-              <div className="text-sm font-medium text-ink text-right truncate max-w-[200px]">
-                {codeforcesStats ? codeforcesStats.organization || 'N/A' : '-'}
+              <div className="text-sm text-muted">Following</div>
+              <div className="text-sm font-medium text-ink text-right">
+                {githubStats ? githubStats.following : '-'}
               </div>
             </div>
           </a>

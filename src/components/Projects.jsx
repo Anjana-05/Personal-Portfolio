@@ -1,24 +1,24 @@
 const projects = [
   {
-    title: 'Appointment Booking System',
+    title: 'Appointment Booking Platform',
     description: 'A comprehensive appointment booking system that allows users to schedule, manage, and track appointments with an intuitive interface and admin dashboard.',
-    tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
-    github: 'https://github.com/Anjana-05/Appointix-mern',
+    tech: ['ReactJS', 'TailwindCSS', 'Node.js', 'MongoDB'],
+    github: 'https://github.com/Anjana-05/Online-Appointment-Scheduler',
     demo: 'https://prescripto-mern-nu.vercel.app/',
     image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Personal Expense Tracker',
-    description: 'An Angular-based expense tracking application that helps users monitor their spending habits, set budgets, and generate detailed financial reports.',
-    tech: ['Angular', 'Tailwind', 'Node.js','MongoDB'],
-    github: 'https://github.com/Anjana-05/Personal-Expense-Tracker',
-    demo: 'https://personal-expense-tracker-mern.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80'
+    title: 'E-Commerce Platform',
+    description: 'A full-featured e-commerce platform with product catalog, shopping cart, user authentication, and payment integration. Built with modern MERN stack.',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe API'],
+    github: 'https://github.com/Anjana-05/E-Commerce-Platform',
+    demo: 'https://ecommerce-platform-demo.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80'
   },
   {
     title: 'Yummy Spot - Food Ordering UI',
     description: 'A modern and responsive food ordering user interface that provides an engaging experience for browsing menus, selecting items, and placing orders.',
-    tech: ['HTML','CSS','JavaScript'],
+    tech: ['HTML', 'JavaScript', 'Bootstrap'],
     github: 'https://github.com/Anjana-05/Yummy-Spot',
     demo: 'https://anjana-05.github.io/Yummy-Spot/',
     image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=800&q=80'
@@ -126,18 +126,18 @@ function Projects() {
       id="projects"
       className="pt-24 pb-20 bg-page"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 text-left">
         <div className="mb-10 flex items-center justify-between gap-4">
-          <div>
+          <div className="text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
               <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
               <span className="uppercase tracking-[0.18em] text-[0.68rem]">Selected work</span>
             </div>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink">Projects</h2>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink text-left">Projects</h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 responsive-grid">
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}

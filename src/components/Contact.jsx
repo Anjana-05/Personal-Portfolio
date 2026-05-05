@@ -113,21 +113,21 @@ function Contact() {
       id="contact"
       className="pt-24 pb-24 bg-page"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 text-left">
         <div className="mb-10 flex items-center justify-between gap-4">
-          <div>
+          <div className="text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
               <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
               <span className="uppercase tracking-[0.18em] text-[0.68rem]">Let&apos;s talk</span>
             </div>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink">Contact</h2>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink text-left">Contact</h2>
           </div>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-ink">Get in Touch</h3>
-            <p className="text-sm text-muted max-w-md">
+          <div className="space-y-6 text-left">
+            <h3 className="text-2xl font-semibold text-ink text-left">Get in Touch</h3>
+            <p className="text-sm text-muted max-w-md text-left">
               Whether you have an opportunity, a project idea, or just want to say hi, feel free to
               reach out. I&apos;ll get back to you as soon as I can.
             </p>
@@ -154,6 +154,25 @@ function Contact() {
                 </span>
                 <span className="text-sm font-medium">anjanabaskaran2005@gmail.com</span>
               </a>
+              <div
+                className="group flex items-center gap-3 text-muted transition-all duration-200 ease-out"
+              >
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong group-hover:translate-y-[-1px] transition-transform duration-200">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4.5 w-4.5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" />
+                  </svg>
+                </span>
+                <span className="text-sm font-medium">+91 8098996339</span>
+              </div>
               <a
                 href="https://github.com/Anjana-05"
                 target="_blank"

@@ -17,17 +17,16 @@ function Achievements() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
-            'Won first place in regional coding competition',
-            'Completed full-stack web development bootcamp',
-            'Published open-source project with 100+ stars on GitHub',
-            'Earned AWS Certified Cloud Practitioner certification',
-            'Contributed to major open-source project',
-            'Graduated with honors in Computer Science'
+            '2nd Place – KRATORQ-24 Paper Presentation',
+            '3rd Place – HACKHORIZON 12-hour Hackathon',
+            'Academic Excellence Award (Top 3% in department)',
+            'Certifications: MongoDB Associate Developer, DBMS, GitHub Foundations',
+            'Paper Presentations: Smart Materials (Feb 2024), Zero-code AI Dev (Nov 2024)',
+            'Roles: Placement Coordinator, Documentation Team Head (IIC), SPOC (IIC)'
           ].map((text, index) => (
             <div
               key={text}
-              className={`flex items-start gap-3 bg-section border border-border p-4 rounded-2xl transition-all duration-200 ease-out hover:shadow-md hover:shadow-primary/10 hover:scale-[1.01] opacity-0 translate-y-3 animate-[fade-up_${0.6 +
-                index * 0.05}s_ease-out_forwards]`}
+              className="flex items-start gap-3 bg-section border border-border p-4 rounded-2xl transition-all duration-200 ease-out hover:shadow-md hover:shadow-primary/10 hover:scale-[1.01]"
             >
               <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-surface text-primary border border-border-strong">
                 {/* trophy icon */}
@@ -48,7 +47,7 @@ function Achievements() {
                   <path d="M17 4h2a2 2 0 0 1 2 2v1a3 3 0 0 1-3 3" />
                 </svg>
               </span>
-              <p className="text-muted text-sm leading-relaxed">{text}</p>
+              <p className="text-text text-sm leading-relaxed">{text}</p>
             </div>
           ))}
         </div>

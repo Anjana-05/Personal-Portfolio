@@ -4,18 +4,18 @@ function Skills() {
       id="skills"
       className="pt-24 pb-20 bg-page"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 text-left">
         <div className="mb-10 flex items-center justify-between gap-4">
-          <div>
+          <div className="text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
               <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
               <span className="uppercase tracking-[0.18em] text-[0.68rem]">Tech stack</span>
             </div>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink">Skills</h2>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink text-left">Skills</h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 responsive-grid">
           <div className="bg-section border border-border p-6 rounded-2xl transition-all duration-200 ease-out hover:shadow-md hover:shadow-primary/10 hover:scale-[1.01]">
             <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong">
               {/* curly braces icon */}
@@ -41,7 +41,7 @@ function Skills() {
                 C
               </span>
               <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
-                C++
+                Python
               </span>
               <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
                 JavaScript
@@ -69,18 +69,17 @@ function Skills() {
             </div>
             <h3 className="text-xl font-semibold mb-3 text-ink">Frontend</h3>
             <div className="flex flex-wrap gap-2">
-              
-            <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
+              <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
                 HTML
               </span>
               <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
                 CSS
               </span>
               <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
-                Tailwind CSS
+                ReactJS
               </span>
               <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
-                React
+                TailwindCSS
               </span>
             </div>
           </div>
@@ -114,6 +113,9 @@ function Skills() {
               <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
                 REST API
               </span>
+              <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
+                Spring Boot
+              </span>
             </div>
           </div>
 
@@ -142,6 +144,9 @@ function Skills() {
               </span>
               <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
                 MySQL
+              </span>
+              <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
+                Firebase
               </span>
             </div>
           </div>
@@ -174,6 +179,12 @@ function Skills() {
               </span>
               <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
                 Postman
+              </span>
+              <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
+                Docker
+              </span>
+              <span className="px-3 py-1 bg-surface border border-border-strong text-text rounded-full text-xs">
+                AWS
               </span>
             </div>
           </div>

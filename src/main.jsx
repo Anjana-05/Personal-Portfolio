@@ -1,14 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './style.css'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import './style.css'
+
+// Initialize theme
+const savedTheme = localStorage.getItem('theme') || 'dark'
+document.documentElement.classList.add(savedTheme)
 
 const rootElement = document.getElementById('root')
 if (rootElement) {
-  createRoot(rootElement).render(
-    <StrictMode>
+  ReactDOM.createRoot(rootElement).render(
+    <React.StrictMode>
       <App />
-    </StrictMode>,
+    </React.StrictMode>,
   )
 }
-

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 function Navbar() {
   const [activeSection, setActiveSection] = useState('home')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
+  
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'skills', 'projects', 'achievements', 'contact']
@@ -42,8 +42,8 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-page border-b border-border">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           <a
             href="#home"
             onClick={(e) => handleClick(e, 'home')}
@@ -76,10 +76,11 @@ function Navbar() {
                 </a>
               )
             })}
-          </div>
+            
+                      </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-muted hover:text-ink p-2 focus:outline-none"
