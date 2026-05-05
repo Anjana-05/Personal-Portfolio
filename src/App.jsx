@@ -13,7 +13,7 @@ function App() {
     <ThemeProvider>
       <div className="min-h-screen bg-page text-text">
         <Navbar />
-        <main>
+        <main className="max-w-7xl mx-auto px-6">
           <Hero />
           <About />
           <Skills />

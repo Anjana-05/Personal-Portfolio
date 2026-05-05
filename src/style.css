@@ -3,40 +3,45 @@
 
 :root {
   /* Light theme (default) */
-  --c-page: 250 250 250; /* Light gray background */
+  --c-page: 249 250 251; /* Very light gray background */
   --c-section: 255 255 255; /* White for sections */
   --c-surface: 248 250 252; /* Light surface */
 
-  --c-ink: 15 23 42; /* Dark slate for headings */
-  --c-text: 71 85 105; /* Slate for text */
+  --c-ink: 30 41 59; /* Dark blue for headings */
+  --c-text: 55 65 81; /* Blue-gray for text */
   --c-muted: 148 163 184; /* Slate-400 for muted text */
 
   --c-border: 226 232 240; /* Light border */
   --c-border-strong: 203 213 225; /* Stronger border */
 
-  /* Cyan/Teal accent for both themes */
-  --c-primary: 6 182 212; /* Cyan-500 */
-  --c-primary-hover: 34 211 238; /* Cyan-400 */
-  --c-primary-soft: 12 74 110; /* Sky-900 */
+  /* Blue accent for both themes */
+  --c-primary: 59 130 246; /* Blue-500 */
+  --c-primary-hover: 37 99 235; /* Blue-600 */
+  --c-primary-soft: 147 197 253; /* Blue-200 */
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, rgb(59 130 246) 0%, rgb(37 99 235) 100%);
+  --gradient-hero: linear-gradient(135deg, rgb(59 130 246) 0%, rgb(30 41 59) 100%);
+  --gradient-card: linear-gradient(135deg, rgb(248 250 252) 0%, rgb(147 197 253) 100%);
 }
 
 .dark {
   /* Dark theme */
-  --c-page: 2 12 27; /* Deep Ocean Blue */
-  --c-section: 5 25 45; /* Lighter Ocean Blue */
-  --c-surface: 10 40 70; /* Surface Ocean Blue */
+  --c-page: 15 23 42; /* Dark blue background */
+  --c-section: 30 41 59; /* Darker blue for sections */
+  --c-surface: 30 41 59; /* Surface blue */
 
   --c-ink: 255 255 255; /* White */
-  --c-text: 240 248 255; /* AliceBlue */
-  --c-muted: 148 163 184; /* Slate-400 */
+  --c-text: 226 232 240; /* Light gray text */
+  --c-muted: 148 163 184; /* Slate-400 for muted text */
 
-  --c-border: 30 60 90; /* Ocean Border */
-  --c-border-strong: 50 90 130; /* Strong Ocean Border */
+  --c-border: 55 65 81; /* Blue border */
+  --c-border-strong: 71 85 105; /* Stronger blue border */
 
-  /* Cyan/Teal accent for Ocean theme */
-  --c-primary: 6 182 212; /* Cyan-500 */
-  --c-primary-hover: 34 211 238; /* Cyan-400 */
-  --c-primary-soft: 12 74 110; /* Sky-900 */
+  /* Blue accent for dark theme */
+  --c-primary: 59 130 246; /* Blue-500 */
+  --c-primary-hover: 37 99 235; /* Blue-600 */
+  --c-primary-soft: 147 197 253; /* Blue-200 */
 }
 
 html {
@@ -45,7 +50,6 @@ html {
 
 body {
   margin: 0;
-  padding: 0 1rem;
   background-color: rgb(var(--c-page));
   color: rgb(var(--c-text));
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -58,24 +62,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@media (min-width: 640px) {
-  body {
-    padding: 0 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    padding: 0 4rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  body {
-    padding: 0 6rem;
-  }
 }
 
 @keyframes fade-up {
@@ -106,6 +92,26 @@ body {
   100% {
     transform: translateX(100%);
   }
+}
+
+/* Gradient utilities */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.bg-gradient-card {
+  background: var(--gradient-card);
+}
+
+.text-gradient-primary {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .animate-float {
@@ -379,6 +385,7 @@ a:focus-visible {
 /* Container utilities */
 .container {
   width: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;

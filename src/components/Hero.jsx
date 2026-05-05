@@ -6,10 +6,10 @@ function Hero() {
       id="home"
       className="pt-24 pb-16 min-h-screen flex items-center bg-page"
     >
-      <div className="container mx-auto px-4 text-left">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center">
+      <div className="text-left">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
           {/* Left Column - Text Content */}
-          <div className="space-y-3 sm:space-y-4 animate-in animate-delay-100 text-left">
+          <div className="lg:col-span-7 space-y-3 sm:space-y-4 animate-in animate-delay-100 text-left">
             {/* badge */}
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/20 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20 cursor-default">
               <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
@@ -19,8 +19,8 @@ function Hero() {
             </div>
 
             <div>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl leading-tight font-bold text-ink text-left transition-all duration-300 hover:scale-105 hover:text-primary cursor-default mb-1">
-                Anjana Baskaran
+              <h1 className="text-5xl sm:text-6xl md:text-7xl leading-tight font-bold text-ink text-left transition-all duration-300 hover:scale-105 cursor-default">
+                Anjana B
               </h1>
 
               <p className="text-lg sm:text-xl text-text flex items-center gap-2 text-left transition-all duration-300 hover:translate-x-2 group">
@@ -44,7 +44,7 @@ function Hero() {
                 <span className="transition-colors duration-300 group-hover:text-primary">Full Stack Developer</span>
               </p>
 
-              <p className="text-base sm:text-lg text-muted mb-6 max-w-lg text-left">
+              <p className="text-base sm:text-lg text-muted mb-3 max-w-lg text-left">
                 Passionate full stack developer with expertise in React, Node.js, and modern web technologies. 
                 I build scalable applications and solve complex problems with clean, efficient code. 
                 Always eager to learn new technologies and contribute to innovative projects.
@@ -125,15 +125,15 @@ function Hero() {
           </div>
 
           {/* Right Column - Profile Image */}
-          <div className="flex justify-center lg:justify-end items-center animate-in animate-delay-200 h-full">
-            <div className="relative group">
+          <div className="lg:col-span-5 lg:pr-12 xl:pr-20 flex justify-center lg:justify-start lg:pl-10 items-center animate-in animate-delay-200 h-full">
+            <div className="relative group w-48 h-48 sm:w-60 sm:h-60 lg:w-full lg:aspect-square lg:h-auto lg:max-w-[280px] xl:max-w-[320px]">
               {/* Floating animation container */}
-              <div className="animate-float">
+              <div className="animate-float w-full h-full">
                 {/* Profile Image */}
-                <div className="w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-2xl overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/40 group-hover:rotate-3 border-2 border-primary/30 relative">
+                <div className="w-full h-full rounded-2xl overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/40 group-hover:rotate-3 border-2 border-primary/30 relative">
                   <img
-                    //src={profileImage}
-                    alt="Anjana Baskaran - Full Stack Developer"
+                    src={profileImage}
+                    alt="Anjana B - Full Stack Developer"
                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 group-hover:contrast-105"
                     loading="eager"
                   />

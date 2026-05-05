@@ -126,7 +126,7 @@ function Projects() {
       id="projects"
       className="pt-24 pb-20 bg-page"
     >
-      <div className="container mx-auto px-4 text-left">
+      <div className="text-left">
         <div className="mb-10 flex items-center justify-between gap-4">
           <div className="text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">

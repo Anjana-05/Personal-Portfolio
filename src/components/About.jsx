@@ -4,7 +4,7 @@ function About() {
       id="about"
       className="pt-24 pb-20 bg-page"
     >
-      <div className="container mx-auto px-4">
+      <div className="text-left">
         <div className="mb-6 flex items-center justify-between gap-4">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-sm font-semibold text-primary hover:border-primary hover:bg-primary/20 transition-all duration-200">
