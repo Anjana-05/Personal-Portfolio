@@ -1,15 +1,46 @@
 import { useState, useEffect } from 'react'
 
+const AnimatedCounter = ({ value, duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (value === null || value === undefined || isNaN(value)) return;
+    
+    let startTimestamp = null;
+    const startValue = 0;
+    const endValue = Number(value);
+
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      // easeOutSine
+      const easeProgress = Math.sin((progress * Math.PI) / 2);
+      setCount(Math.floor(easeProgress * (endValue - startValue) + startValue));
+      
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        setCount(endValue);
+      }
+    };
+    
+    window.requestAnimationFrame(step);
+  }, [value, duration]);
+
+  return <span>{count}</span>;
+};
+
 function CodingProfiles() {
   const [leetCodeStats, setLeetCodeStats] = useState(null)
   const [githubStats, setGithubStats] = useState(null)
+  const [githubCommits, setGithubCommits] = useState(null)
 
   useEffect(() => {
     // Fetch LeetCode Stats
-    fetch('https://leetcodestats.poros.dev/Anjana_baskaran')
+    fetch('https://alfa-leetcode-api.onrender.com/userProfile/Anjana_baskaran')
       .then(res => res.json())
       .then(data => {
-        if (data.status === 'success') {
+        if (data && data.totalSolved !== undefined) {
           setLeetCodeStats(data)
         }
       })
@@ -24,6 +55,20 @@ function CodingProfiles() {
         }
       })
       .catch(err => console.error('Error fetching GitHub stats:', err))
+
+    // Fetch GitHub Commits
+    fetch('https://api.github.com/search/commits?q=author:Anjana-05', {
+      headers: {
+        'Accept': 'application/vnd.github.cloak-preview'
+      }
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.total_count !== undefined) {
+          setGithubCommits(data.total_count)
+        }
+      })
+      .catch(err => console.error('Error fetching GitHub commits:', err))
   }, [])
 
   return (
@@ -218,25 +263,65 @@ function CodingProfiles() {
               </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-surface/50 rounded-xl p-4 border border-border">
-                <div className="text-xs text-muted mb-1">Public Repos</div>
-                <div className="text-3xl font-bold text-ink">
-                  {githubStats ? githubStats.public_repos : '-'}
+            <div className="flex flex-col gap-4">
+              <div className="bg-surface/50 rounded-xl p-5 border border-border flex items-center justify-between hover:bg-surface transition-colors z-10 relative">
+                <div className="text-sm font-medium text-muted">Public Repositories</div>
+                <div className="text-3xl font-black text-ink">
+                  {githubStats ? <AnimatedCounter value={githubStats.public_repos} /> : '-'}
                 </div>
               </div>
-              <div className="bg-surface/50 rounded-xl p-4 border border-border">
-                <div className="text-xs text-muted mb-1">Followers</div>
-                <div className="text-3xl font-bold text-ink">
-                  {githubStats ? githubStats.followers : '-'}
+              
+              <div className="relative bg-surface/50 rounded-xl p-8 border border-border flex flex-col items-center justify-center text-center overflow-hidden group/commits hover:border-primary/50 transition-all duration-300 min-h-[180px]">
+                {/* Innovative SVG Animated Graph Background */}
+                <div className="absolute inset-0 opacity-30 group-hover/commits:opacity-60 transition-opacity duration-700 pointer-events-none">
+                  <svg className="w-full h-full text-primary" viewBox="0 0 400 100" preserveAspectRatio="none" fill="none" stroke="currentColor">
+                    {/* Gradient Fill under the line */}
+                    <defs>
+                      <linearGradient id="graph-gradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="currentColor" stopOpacity="0.4" />
+                        <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
+                      </linearGradient>
+                    </defs>
+                    <path 
+                      d="M0,80 L0,60 C 40,60 60,30 100,50 C 140,70 160,20 200,40 C 240,60 260,10 300,30 C 340,50 360,70 400,60 L400,80 Z" 
+                      fill="url(#graph-gradient)" 
+                      stroke="none"
+                      className="animate-[dash_2s_ease-out_forwards]"
+                    />
+                    {/* The Line */}
+                    <path 
+                      d="M0,60 C 40,60 60,30 100,50 C 140,70 160,20 200,40 C 240,60 260,10 300,30 C 340,50 360,70 400,60" 
+                      strokeWidth="3" 
+                      strokeLinecap="round"
+                      style={{ strokeDasharray: 1000, strokeDashoffset: 1000 }}
+                      className="animate-[dash_2.5s_ease-in-out_forwards]" 
+                    />
+                    
+                    {/* Data Points (Commits) */}
+                    <circle cx="100" cy="50" r="4" fill="currentColor" opacity="0" className="animate-[fade-in_0.5s_ease-out_1s_forwards] animate-pulse" />
+                    <circle cx="200" cy="40" r="5" fill="currentColor" opacity="0" className="animate-[fade-in_0.5s_ease-out_1.5s_forwards]" />
+                    <circle cx="300" cy="30" r="6" fill="currentColor" opacity="0" className="animate-[fade-in_0.5s_ease-out_2s_forwards] shadow-glow" />
+                    
+                    {/* Highlight rings on hover */}
+                    <circle cx="300" cy="30" r="12" stroke="currentColor" strokeWidth="1" opacity="0" className="group-hover/commits:animate-ping" />
+                  </svg>
                 </div>
-              </div>
-            </div>
-
-            <div className="mt-4 bg-surface/50 rounded-xl p-4 border border-border flex items-center justify-between">
-              <div className="text-sm text-muted">Following</div>
-              <div className="text-sm font-medium text-ink text-right">
-                {githubStats ? githubStats.following : '-'}
+                
+                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover/commits:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute -inset-full bg-gradient-to-r from-transparent via-primary/10 to-transparent flex -translate-x-full group-hover/commits:animate-[shimmer_1.5s_infinite]"></div>
+                
+                <div className="text-sm font-medium text-primary mb-2 flex items-center gap-2 relative z-10 backdrop-blur-sm px-3 py-1 rounded-full bg-surface/30">
+                  <svg className="w-4 h-4 group-hover/commits:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                  Activity Pulse
+                </div>
+                <div className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 relative z-10 drop-shadow-lg scale-100 group-hover/commits:scale-105 transition-transform duration-300">
+                  {githubCommits !== null ? <AnimatedCounter value={githubCommits} /> : '-'}
+                </div>
+                <div className="text-xs uppercase tracking-widest text-muted mt-2 relative z-10 font-bold">
+                  Total Lifetime Commits
+                </div>
               </div>
             </div>
           </a>

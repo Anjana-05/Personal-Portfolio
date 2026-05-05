@@ -482,3 +482,12 @@ img {
     height: 20rem !important;
   }
 }
+
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+
+
+@keyframes dash { to { stroke-dashoffset: 0; } }
+
+
+@keyframes fade-in { to { opacity: 1; } }
+
