@@ -6,11 +6,9 @@ import Projects from './components/Projects.jsx'
 import Achievements from './components/Achievements.jsx'
 import CodingProfiles from './components/CodingProfiles.jsx'
 import Contact from './components/Contact.jsx'
-import { ThemeProvider } from './contexts/ThemeContext.jsx'
 
 function App() {
   return (
-    <ThemeProvider>
       <div className="min-h-screen bg-page text-text">
         <Navbar />
         <main className="max-w-7xl mx-auto px-6">
@@ -23,7 +21,6 @@ function App() {
           <Contact />
         </main>
       </div>
-    </ThemeProvider>
   )
 }
 

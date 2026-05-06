@@ -4,7 +4,7 @@ function Achievements() {
       id="achievements"
       className="pt-24 pb-20 bg-page"
     >
-      <div className="text-left">
+      <div className="container mx-auto px-4">
         <div className="mb-10 flex items-center justify-between gap-4">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
@@ -47,7 +47,7 @@ function Achievements() {
                   <path d="M17 4h2a2 2 0 0 1 2 2v1a3 3 0 0 1-3 3" />
                 </svg>
               </span>
-              <p className="text-text text-sm leading-relaxed">{text}</p>
+              <p className="text-white text-sm leading-relaxed">{text}</p>
             </div>
           ))}
         </div>
