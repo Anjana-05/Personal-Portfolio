@@ -29,32 +29,32 @@ function Contact() {
 
   const validate = () => {
     const newErrors = {}
-    
+
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required'
     }
-    
+
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email'
     }
-    
+
     if (!formData.subject.trim()) {
       newErrors.subject = 'Subject is required'
     }
-    
+
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'
     }
-    
+
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    
+
     if (!validate()) {
       return
     }
@@ -116,14 +116,15 @@ function Contact() {
       <div className="text-left">
         <div className="mb-10 flex items-center justify-between gap-4">
           <div className="text-left">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/20 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20 cursor-default">
               <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
               <span className="uppercase tracking-[0.18em] text-[0.68rem]">Let&apos;s talk</span>
             </div>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink text-left">Contact</h2>
+            <div className="w-24 h-1 bg-gradient-primary rounded-full mb-8 opacity-80"></div>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6 text-left">
             <h3 className="text-2xl font-semibold text-ink text-left">Get in Touch</h3>
@@ -136,7 +137,7 @@ function Contact() {
                 href="mailto:anjanabaskaran2005@gmail.com"
                 className="group flex items-center gap-3 text-muted hover:text-ink transition-all duration-200 ease-out"
               >
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong group-hover:translate-y-[-1px] transition-transform duration-200">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong group-hover:-translate-y-px transition-transform duration-200">
                   {/* mail icon */}
                   <svg
                     viewBox="0 0 24 24"
@@ -157,7 +158,7 @@ function Contact() {
               <div
                 className="group flex items-center gap-3 text-muted transition-all duration-200 ease-out"
               >
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong group-hover:translate-y-[-1px] transition-transform duration-200">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong group-hover:-translate-y-px transition-transform duration-200">
                   <svg
                     viewBox="0 0 24 24"
                     className="h-4.5 w-4.5"
@@ -179,7 +180,7 @@ function Contact() {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 text-muted hover:text-ink transition-all duration-200 ease-out"
               >
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-surface text-ink border border-border-strong group-hover:translate-y-[-1px] transition-transform duration-200">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-surface text-ink border border-border-strong group-hover:-translate-y-px transition-transform duration-200">
                   {/* GitHub icon */}
                   <svg
                     viewBox="0 0 24 24"
@@ -202,7 +203,7 @@ function Contact() {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 text-muted hover:text-ink transition-all duration-200 ease-out"
               >
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong group-hover:translate-y-[-1px] transition-transform duration-200">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong group-hover:-translate-y-px transition-transform duration-200">
                   {/* LinkedIn icon */}
                   <svg
                     viewBox="0 0 24 24"
@@ -249,7 +250,7 @@ function Contact() {
                   className="w-full px-4 py-3 bg-surface border border-border-strong text-ink placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 ease-out rounded-lg"
                 />
                 {errors.name && (
-              <p className="text-red-400 text-xs mt-1">{errors.name}</p>
+                  <p className="text-rose-300 text-xs mt-1">{errors.name}</p>
                 )}
               </div>
 
@@ -263,7 +264,7 @@ function Contact() {
                   className="w-full px-4 py-3 bg-surface border border-border-strong text-ink placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 ease-out rounded-lg"
                 />
                 {errors.email && (
-              <p className="text-red-400 text-xs mt-1">{errors.email}</p>
+                  <p className="text-rose-300 text-xs mt-1">{errors.email}</p>
                 )}
               </div>
 
@@ -277,7 +278,7 @@ function Contact() {
                   className="w-full px-4 py-3 bg-surface border border-border-strong text-ink placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 ease-out rounded-lg"
                 />
                 {errors.subject && (
-              <p className="text-red-400 text-xs mt-1">{errors.subject}</p>
+                  <p className="text-rose-300 text-xs mt-1">{errors.subject}</p>
                 )}
               </div>
 
@@ -291,7 +292,7 @@ function Contact() {
                   className="w-full px-4 py-3 bg-surface border border-border-strong text-ink placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 ease-out resize-none rounded-lg"
                 />
                 {errors.message && (
-              <p className="text-red-400 text-xs mt-1">{errors.message}</p>
+                  <p className="text-rose-300 text-xs mt-1">{errors.message}</p>
                 )}
               </div>
 
@@ -299,15 +300,15 @@ function Contact() {
                 <p className="text-green-600 text-xs">Message sent successfully!</p>
               )}
               {submitStatus === 'error' && (
-              <p className="text-red-600 text-xs">
-                {submitError || 'Failed to send message. Please try again.'}
-              </p>
+                <p className="text-rose-400 text-xs">
+                  {submitError || 'Failed to send message. Please try again.'}
+                </p>
               )}
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary border border-primary text-white text-sm font-semibold tracking-wide hover:bg-primary-hover hover:scale-[1.01] transition-all duration-200 ease-out disabled:opacity-50 disabled:cursor-not-allowed rounded-full"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary border border-primary text-white text-sm font-semibold tracking-wide hover:bg-primary/95 hover:scale-[1.01] transition-all duration-200 ease-out disabled:opacity-50 disabled:cursor-not-allowed rounded-full"
               >
                 <span>{isSubmitting ? 'Sending...' : 'Submit'}</span>
                 {!isSubmitting && (

@@ -79,11 +79,12 @@ function CodingProfiles() {
       <div className="text-left">
         <div className="mb-10 flex items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/20 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20 cursor-default">
               <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
               <span className="uppercase tracking-[0.18em] text-[0.68rem]">Competitive coding</span>
             </div>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink">Coding Profiles</h2>
+            <div className="w-24 h-1 bg-gradient-primary rounded-full mb-8 opacity-80"></div>
           </div>
         </div>
 
@@ -95,9 +96,10 @@ function CodingProfiles() {
             rel="noopener noreferrer"
             className="group block bg-section border border-border rounded-2xl p-6 hover:border-border-strong hover:bg-surface hover:scale-[1.01] transition-all duration-200 ease-out"
           >
-            <div className="flex items-center justify-between mb-6">
+            <div className="absolute inset-0 bg-linear-to-r from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="flex items-center justify-between mb-6 relative z-10">
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong group-hover:scale-110 transition-transform duration-200">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 text-primary border border-primary/30 group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
                   <svg
                     viewBox="0 0 24 24"
                     className="h-6 w-6"
@@ -115,18 +117,16 @@ function CodingProfiles() {
                 </span>
                 <h3 className="text-xl font-bold text-ink">LeetCode</h3>
               </div>
-              <span className="text-primary">
+              <span className="text-primary group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </span>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-8">
-              {/* Circular Progress */}
-              <div className="relative h-40 w-40 flex-shrink-0">
+            <div className="flex flex-col sm:flex-row items-center gap-8 relative z-10">
+              <div className="relative h-40 w-40 shrink-0">
                 <svg className="h-full w-full transform -rotate-90" viewBox="0 0 100 100">
-                  {/* Background Circle */}
                   <circle
                     cx="50"
                     cy="50"
@@ -138,7 +138,6 @@ function CodingProfiles() {
                   />
                   {leetCodeStats && (
                     <>
-                      {/* Easy Segment */}
                       <circle
                         cx="50"
                         cy="50"
@@ -147,9 +146,8 @@ function CodingProfiles() {
                         strokeWidth="6"
                         fill="transparent"
                         strokeDasharray={`${(leetCodeStats.easySolved / leetCodeStats.totalSolved) * 283} 283`}
-                        className="text-emerald-500 transition-all duration-1000 ease-out"
+                        className="text-emerald-400 transition-all duration-1200 ease-out drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]"
                       />
-                      {/* Medium Segment */}
                       <circle
                         cx="50"
                         cy="50"
@@ -159,9 +157,8 @@ function CodingProfiles() {
                         fill="transparent"
                         strokeDasharray={`${(leetCodeStats.mediumSolved / leetCodeStats.totalSolved) * 283} 283`}
                         strokeDashoffset={-((leetCodeStats.easySolved / leetCodeStats.totalSolved) * 283)}
-                        className="text-yellow-500 transition-all duration-1000 ease-out"
+                        className="text-amber-400 transition-all duration-1200 ease-out drop-shadow-[0_0_8px_rgba(251,146,60,0.3)]"
                       />
-                      {/* Hard Segment */}
                       <circle
                         cx="50"
                         cy="50"
@@ -171,14 +168,14 @@ function CodingProfiles() {
                         fill="transparent"
                         strokeDasharray={`${(leetCodeStats.hardSolved / leetCodeStats.totalSolved) * 283} 283`}
                         strokeDashoffset={-(((leetCodeStats.easySolved + leetCodeStats.mediumSolved) / leetCodeStats.totalSolved) * 283)}
-                        className="text-red-500 transition-all duration-1000 ease-out"
+                        className="text-rose-400 transition-all duration-1200 ease-out drop-shadow-[0_0_8px_rgba(248,113,113,0.3)]"
                       />
                     </>
                   )}
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="flex items-baseline gap-0.5">
-                    <span className="text-3xl font-bold text-ink">
+                  <div className="flex items-baseline gap-0.5 animate-[scale_0.6s_cubic-bezier(0.34,1.56,0.64,1)_both]">
+                    <span className="text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-primary via-primary-soft to-primary">
                       {leetCodeStats ? leetCodeStats.totalSolved : '-'}
                     </span>
                     <span className="text-xs text-muted font-medium">
@@ -186,7 +183,7 @@ function CodingProfiles() {
                     </span>
                   </div>
                   <div className="flex items-center gap-1 mt-1">
-                    <svg className="w-3 h-3 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                     </svg>
                     <span className="text-xs text-muted font-medium">Solved</span>
@@ -194,12 +191,11 @@ function CodingProfiles() {
                 </div>
               </div>
 
-              {/* Stats List */}
               <div className="flex-1 w-full space-y-3">
-                <div className="flex flex-col p-3 rounded-xl bg-surface/50 border border-border hover:bg-surface transition-colors">
-                  <span className="text-xs font-medium text-emerald-400 mb-1">Easy</span>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-lg font-bold text-ink">
+                <div className="flex flex-col p-3 rounded-xl bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 border border-emerald-400/30 hover:border-emerald-400/60 hover:bg-emerald-500/15 transition-all duration-300 group/easy">
+                  <span className="text-xs font-medium text-emerald-400 mb-1 group-hover/easy:text-emerald-300 transition-colors">Easy</span>
+                  <div className="flex items-baseline gap-1 group-hover/easy:scale-105 transition-transform duration-300">
+                    <span className="text-lg font-bold text-emerald-400">
                       {leetCodeStats ? leetCodeStats.easySolved : '-'}
                     </span>
                     <span className="text-xs text-muted">
@@ -208,10 +204,10 @@ function CodingProfiles() {
                   </div>
                 </div>
 
-                <div className="flex flex-col p-3 rounded-xl bg-surface/50 border border-border hover:bg-surface transition-colors">
-                  <span className="text-xs font-medium text-yellow-400 mb-1">Med.</span>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-lg font-bold text-ink">
+                <div className="flex flex-col p-3 rounded-xl bg-gradient-to-br from-amber-500/10 to-amber-500/5 border border-amber-400/30 hover:border-amber-400/60 hover:bg-amber-500/15 transition-all duration-300 group/medium">
+                  <span className="text-xs font-medium text-amber-400 mb-1 group-hover/medium:text-amber-300 transition-colors">Med.</span>
+                  <div className="flex items-baseline gap-1 group-hover/medium:scale-105 transition-transform duration-300">
+                    <span className="text-lg font-bold text-amber-400">
                       {leetCodeStats ? leetCodeStats.mediumSolved : '-'}
                     </span>
                     <span className="text-xs text-muted">
@@ -220,10 +216,10 @@ function CodingProfiles() {
                   </div>
                 </div>
 
-                <div className="flex flex-col p-3 rounded-xl bg-surface/50 border border-border hover:bg-surface transition-colors">
-                  <span className="text-xs font-medium text-red-400 mb-1">Hard</span>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-lg font-bold text-ink">
+                <div className="flex flex-col p-3 rounded-xl bg-gradient-to-br from-rose-500/10 to-rose-500/5 border border-rose-400/30 hover:border-rose-400/60 hover:bg-rose-500/15 transition-all duration-300 group/hard">
+                  <span className="text-xs font-medium text-rose-400 mb-1 group-hover/hard:text-rose-300 transition-colors">Hard</span>
+                  <div className="flex items-baseline gap-1 group-hover/hard:scale-105 transition-transform duration-300">
+                    <span className="text-lg font-bold text-rose-400">
                       {leetCodeStats ? leetCodeStats.hardSolved : '-'}
                     </span>
                     <span className="text-xs text-muted">
@@ -235,16 +231,16 @@ function CodingProfiles() {
             </div>
           </a>
 
-          {/* GitHub Card */}
           <a
             href="https://github.com/Anjana-05"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block bg-section border border-border rounded-2xl p-6 hover:border-border-strong hover:bg-surface hover:scale-[1.01] transition-all duration-200 ease-out"
+            className="group block bg-gradient-to-br from-section to-section/80 border border-border rounded-2xl p-6 hover:border-primary/50 hover:bg-surface hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 ease-out overflow-hidden relative"
           >
-            <div className="flex items-center justify-between mb-6">
+            <div className="absolute inset-0 bg-linear-to-r from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="flex items-center justify-between mb-6 relative z-10">
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-surface text-primary border border-border-strong group-hover:scale-110 transition-transform duration-200">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 text-primary border border-primary/30 group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
                   <svg
                     viewBox="0 0 24 24"
                     className="h-6 w-6"
@@ -256,67 +252,60 @@ function CodingProfiles() {
                 </span>
                 <h3 className="text-xl font-bold text-ink">GitHub</h3>
               </div>
-              <span className="text-primary">
+              <span className="text-primary group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </span>
             </div>
 
-            <div className="flex flex-col gap-4">
-              <div className="bg-surface/50 rounded-xl p-5 border border-border flex items-center justify-between hover:bg-surface transition-colors z-10 relative">
-                <div className="text-sm font-medium text-muted">Public Repositories</div>
-                <div className="text-3xl font-black text-ink">
+            <div className="flex flex-col gap-4 relative z-10">
+              <div className="bg-gradient-to-r from-primary/10 to-primary-soft/10 rounded-xl p-5 border border-primary/20 flex items-center justify-between hover:border-primary/40 hover:bg-primary/15 transition-all duration-300 z-10 relative group/repos">
+                <div className="text-sm font-medium text-muted group-hover/repos:text-primary/80 transition-colors">Public Repositories</div>
+                <div className="text-3xl font-black text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-soft animate-[scale_0.6s_cubic-bezier(0.34,1.56,0.64,1)_both]">
                   {githubStats ? <AnimatedCounter value={githubStats.public_repos} /> : '-'}
                 </div>
               </div>
-              
-              <div className="relative bg-surface/50 rounded-xl p-8 border border-border flex flex-col items-center justify-center text-center overflow-hidden group/commits hover:border-primary/50 transition-all duration-300 min-h-[180px]">
-                {/* Innovative SVG Animated Graph Background */}
+
+              <div className="relative bg-gradient-to-br from-primary/5 via-primary-soft/5 to-transparent rounded-xl p-8 border border-primary/20 flex flex-col items-center justify-center text-center overflow-hidden group/commits hover:border-primary/60 hover:bg-primary/10 transition-all duration-300 min-h-45">
                 <div className="absolute inset-0 opacity-30 group-hover/commits:opacity-60 transition-opacity duration-700 pointer-events-none">
                   <svg className="w-full h-full text-primary" viewBox="0 0 400 100" preserveAspectRatio="none" fill="none" stroke="currentColor">
-                    {/* Gradient Fill under the line */}
                     <defs>
                       <linearGradient id="graph-gradient" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="0%" stopColor="currentColor" stopOpacity="0.4" />
                         <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
                       </linearGradient>
                     </defs>
-                    <path 
-                      d="M0,80 L0,60 C 40,60 60,30 100,50 C 140,70 160,20 200,40 C 240,60 260,10 300,30 C 340,50 360,70 400,60 L400,80 Z" 
-                      fill="url(#graph-gradient)" 
+                    <path
+                      d="M0,80 L0,60 C 40,60 60,30 100,50 C 140,70 160,20 200,40 C 240,60 260,10 300,30 C 340,50 360,70 400,60 L400,80 Z"
+                      fill="url(#graph-gradient)"
                       stroke="none"
                       className="animate-[dash_2s_ease-out_forwards]"
                     />
-                    {/* The Line */}
-                    <path 
-                      d="M0,60 C 40,60 60,30 100,50 C 140,70 160,20 200,40 C 240,60 260,10 300,30 C 340,50 360,70 400,60" 
-                      strokeWidth="3" 
+                    <path
+                      d="M0,60 C 40,60 60,30 100,50 C 140,70 160,20 200,40 C 240,60 260,10 300,30 C 340,50 360,70 400,60"
+                      strokeWidth="3"
                       strokeLinecap="round"
                       style={{ strokeDasharray: 1000, strokeDashoffset: 1000 }}
-                      className="animate-[dash_2.5s_ease-in-out_forwards]" 
+                      className="animate-[dash_2.5s_ease-in-out_forwards]"
                     />
-                    
-                    {/* Data Points (Commits) */}
-                    <circle cx="100" cy="50" r="4" fill="currentColor" opacity="0" className="animate-[fade-in_0.5s_ease-out_1s_forwards] animate-pulse" />
+                    <circle cx="100" cy="50" r="4" fill="currentColor" opacity="0" className="animate-[fade-in_0.5s_ease-out_1s_forwards]" />
                     <circle cx="200" cy="40" r="5" fill="currentColor" opacity="0" className="animate-[fade-in_0.5s_ease-out_1.5s_forwards]" />
                     <circle cx="300" cy="30" r="6" fill="currentColor" opacity="0" className="animate-[fade-in_0.5s_ease-out_2s_forwards] shadow-glow" />
-                    
-                    {/* Highlight rings on hover */}
                     <circle cx="300" cy="30" r="12" stroke="currentColor" strokeWidth="1" opacity="0" className="group-hover/commits:animate-ping" />
                   </svg>
                 </div>
-                
-                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover/commits:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute -inset-full bg-gradient-to-r from-transparent via-primary/10 to-transparent flex -translate-x-full group-hover/commits:animate-[shimmer_1.5s_infinite]"></div>
-                
+
+                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover/commits:opacity-100 transition-opacity duration-300" />
+                <div className="absolute -inset-full bg-linear-to-r from-transparent via-primary/10 to-transparent flex -translate-x-full group-hover/commits:animate-[shimmer_1.5s_infinite]" />
+
                 <div className="text-sm font-medium text-primary mb-2 flex items-center gap-2 relative z-10 backdrop-blur-sm px-3 py-1 rounded-full bg-surface/30">
                   <svg className="w-4 h-4 group-hover/commits:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                   Activity Pulse
                 </div>
-                <div className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 relative z-10 drop-shadow-lg scale-100 group-hover/commits:scale-105 transition-transform duration-300">
+                <div className="text-6xl font-black text-gradient-primary relative z-10 drop-shadow-lg scale-100 group-hover/commits:scale-110 transition-transform duration-300 animate-[scale_0.6s_cubic-bezier(0.34,1.56,0.64,1)_both]">
                   {githubCommits !== null ? <AnimatedCounter value={githubCommits} /> : '-'}
                 </div>
                 <div className="text-xs uppercase tracking-widest text-muted mt-2 relative z-10 font-bold">

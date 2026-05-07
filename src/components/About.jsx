@@ -7,11 +7,12 @@ function About() {
       <div className="text-left">
         <div className="mb-6 flex items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-sm font-semibold text-primary hover:border-primary hover:bg-primary/20 transition-all duration-200">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-sm font-semibold text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/20 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20 cursor-default">
               <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
               <span className="uppercase tracking-[0.18em] text-xs">Who I am</span>
             </div>
             <h2 className="mt-1 text-3xl sm:text-4xl font-bold text-ink">About Me</h2>
+            <div className="w-24 h-1 bg-gradient-primary rounded-full mb-8 opacity-80"></div>
           </div>
         </div>
 

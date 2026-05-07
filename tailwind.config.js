@@ -10,6 +10,7 @@ export default {
         page: 'rgb(var(--c-page) / <alpha-value>)',
         section: 'rgb(var(--c-section) / <alpha-value>)',
         surface: 'rgb(var(--c-surface) / <alpha-value>)',
+        'surface-hover': 'rgb(var(--c-surface-hover) / <alpha-value>)',
 
         ink: 'rgb(var(--c-ink) / <alpha-value>)',
         text: 'rgb(var(--c-text) / <alpha-value>)',

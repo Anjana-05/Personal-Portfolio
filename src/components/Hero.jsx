@@ -56,10 +56,10 @@ function Hero() {
                 href="https://github.com/Anjana-05"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full px-6 py-3 bg-primary text-white text-sm font-semibold tracking-wide transition-all duration-300 ease-out hover:bg-primary-hover hover:scale-110 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-1 active:scale-95"
+                className="group inline-flex items-center gap-2 rounded-full px-6 py-3 bg-primary text-white text-sm font-semibold tracking-wide transition-all duration-300 ease-out hover:bg-primary/95 hover:scale-110 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-1 active:scale-95"
               >
                 <span className="transition-transform duration-300 group-hover:translate-x-1">GitHub</span>
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary-hover/20 text-white group-hover:translate-x-2 group-hover:rotate-12 transition-all duration-300 group-hover:bg-primary-hover">
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary/20 text-white group-hover:translate-x-2 group-hover:rotate-12 transition-all duration-300 group-hover:bg-primary/40">
                   {/* GitHub mark-like icon */}
                   <svg
                     viewBox="0 0 24 24"
@@ -100,7 +100,7 @@ function Hero() {
                 href="https://drive.google.com/file/d/1icJFbTufqYyDtbO7DtV2BFi4Lwv6wXLB/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full px-6 py-3 bg-gradient-to-r from-primary to-primary-hover text-white text-sm font-medium tracking-wide transition-all duration-300 ease-out hover:from-primary-hover hover:to-primary hover:scale-110 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-1 active:scale-95"
+                className="group inline-flex items-center gap-2 rounded-full px-6 py-3 bg-gradient-to-r from-primary to-primary-hover text-white text-sm font-medium tracking-wide transition-all duration-300 ease-out hover:scale-110 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-1 active:scale-95"
               >
                 <span className="transition-transform duration-300 group-hover:translate-x-1">View Resume</span>
                 <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-white group-hover:translate-x-2 group-hover:rotate-12 transition-all duration-300 group-hover:bg-white group-hover:text-primary">

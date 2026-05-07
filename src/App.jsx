@@ -15,9 +15,9 @@ function App() {
           <Hero />
           <About />
           <Skills />
+          <CodingProfiles />
           <Projects />
           <Achievements />
-          <CodingProfiles />
           <Contact />
         </main>
       </div>

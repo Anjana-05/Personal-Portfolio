@@ -7,11 +7,12 @@ function Achievements() {
       <div className="container mx-auto px-4">
         <div className="mb-10 flex items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/20 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20 cursor-default">
               <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
               <span className="uppercase tracking-[0.18em] text-[0.68rem]">Highlights</span>
             </div>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink">Achievements</h2>
+          <div className="w-24 h-1 bg-gradient-primary rounded-full mb-8 opacity-80"></div>
           </div>
         </div>
 
@@ -47,7 +48,7 @@ function Achievements() {
                   <path d="M17 4h2a2 2 0 0 1 2 2v1a3 3 0 0 1-3 3" />
                 </svg>
               </span>
-              <p className="text-white text-sm leading-relaxed">{text}</p>
+              <p className="text-text text-sm leading-relaxed">{text}</p>
             </div>
           ))}
         </div>
