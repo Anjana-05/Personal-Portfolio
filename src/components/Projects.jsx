@@ -1,6 +1,7 @@
 import appointmentImage from '../assets/Appointment_Booking_Platform.png'
 import yummySpotImage from '../assets/Yummy_Spot.png'
 import expenseTrackerImage from '../assets/Personal_Expense_Tracker.png'
+import hrmsPortalImage from '../assets/HRMS_Portal.png'
 
 const projects = [
   {
@@ -10,6 +11,14 @@ const projects = [
     github: 'https://github.com/Anjana-05/Online-Appointment-Scheduler',
     demo: 'https://prescripto-mern-nu.vercel.app/',
     image: appointmentImage
+  },
+  {
+    title: 'HRMS Portal',
+    description: 'A comprehensive Human Resource Management System portal designed to streamline HR operations, employee management, and organizational workflows with an intuitive dashboard.',
+    tech: ['React', 'Node.js', 'MongoDB', 'TailwindCSS'],
+    github: 'https://github.com/Anjana-05/workify',
+    demo: 'https://workify-ochre.vercel.app/',
+    image: hrmsPortalImage
   },
   {
     title: 'Personal Expense Tracker',
