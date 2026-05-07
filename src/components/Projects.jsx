@@ -35,14 +35,6 @@ const projects = [
     github: 'https://github.com/Anjana-05/Yummy-Spot',
     demo: 'https://anjana-05.github.io/Yummy-Spot/',
     image: yummySpotImage
-  },
-  {
-    title: 'Portfolio Website',
-    description: 'A modern and responsive personal portfolio website built with React and Tailwind CSS, showcasing projects, skills, and professional experience.',
-    tech: ['React', 'Tailwind CSS', 'Vite'],
-    github: 'https://github.com/Anjana-05/Personal-Portfolio',
-    demo: 'https://personal-portfolio-chi-gold.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
   }
 ]
 
