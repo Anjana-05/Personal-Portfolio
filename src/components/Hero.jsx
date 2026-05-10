@@ -100,7 +100,7 @@ function Hero() {
                 href="https://drive.google.com/file/d/1icJFbTufqYyDtbO7DtV2BFi4Lwv6wXLB/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full px-6 py-3 bg-gradient-to-r from-primary to-primary-hover text-white text-sm font-medium tracking-wide transition-all duration-300 ease-out hover:scale-110 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-1 active:scale-95"
+                className="group inline-flex items-center gap-2 rounded-full px-6 py-3 bg-linear-to-r from-primary to-primary-hover text-white text-sm font-medium tracking-wide transition-all duration-300 ease-out hover:scale-110 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-1 active:scale-95"
               >
                 <span className="transition-transform duration-300 group-hover:translate-x-1">View Resume</span>
                 <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-white group-hover:translate-x-2 group-hover:rotate-12 transition-all duration-300 group-hover:bg-white group-hover:text-primary">
@@ -126,35 +126,16 @@ function Hero() {
 
           {/* Right Column - Profile Image */}
           <div className="lg:col-span-5 lg:pr-12 xl:pr-20 flex justify-center lg:justify-start lg:pl-10 items-center animate-in animate-delay-200 h-full">
-            <div className="relative group w-48 h-48 sm:w-60 sm:h-60 lg:w-full lg:aspect-square lg:h-auto lg:max-w-[280px] xl:max-w-[320px]">
-              {/* Floating animation container */}
-              <div className="animate-float w-full h-full">
-                {/* Profile Image */}
-                <div className="w-full h-full rounded-2xl overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/40 group-hover:rotate-3 border-2 border-primary/30 relative">
-                  <img
-                    src={profileImage}
-                    alt="Anjana B - Full Stack Developer"
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 group-hover:contrast-105"
-                    loading="eager"
-                  />
-                  {/* Enhanced gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  {/* Shimmer effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                </div>
+            <div className="relative group w-48 h-48 sm:w-60 sm:h-60 lg:w-full lg:aspect-square lg:h-auto lg:max-w-70 xl:max-w-[320px]">
+              {/* Formal profile image presentation */}
+              <div className="w-full h-full rounded-2xl overflow-hidden border border-primary/20 bg-section shadow-xl shadow-black/10">
+                <img
+                  src={profileImage}
+                  alt="Anjana B - Full Stack Developer"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
               </div>
-              
-              {/* Enhanced decorative elements */}
-              <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full animate-pulse group-hover:scale-150 transition-transform duration-300" />
-              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-primary/50 rounded-full animate-pulse delay-75 group-hover:scale-150 transition-transform duration-300" />
-              <div className="absolute top-1/2 -left-4 w-3 h-3 bg-primary/30 rounded-full animate-pulse delay-150 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute top-1/3 -right-3 w-2 h-2 bg-primary/40 rounded-full animate-pulse delay-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
-              {/* Enhanced frame effect */}
-              <div className="absolute inset-0 rounded-2xl border-2 border-white/20 pointer-events-none group-hover:border-white/40 transition-colors duration-300" />
-              
-              {/* Glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-primary/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
             </div>
           </div>
         </div>

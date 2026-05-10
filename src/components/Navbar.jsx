@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
+import profileImage from '../assets/profile.jpeg'
 
 function Navbar() {
-  const [activeSection, setActiveSection] = useState('home')
+  const [activeSection, setActiveSection] = useState('about')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'skills', 'projects', 'achievements', 'contact']
+      const sections = ['about', 'skills', 'coding-profiles', 'projects', 'achievements', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -34,7 +35,9 @@ function Navbar() {
   }
 
   const links = [
+    { id: 'about', label: 'About' },
     { id: 'skills', label: 'Skills' },
+    { id: 'coding-profiles', label: 'Coding Profiles' },
     { id: 'projects', label: 'Projects' },
     { id: 'achievements', label: 'Achievements' },
     { id: 'contact', label: 'Contact' }
@@ -47,11 +50,13 @@ function Navbar() {
           <a
             href="#home"
             onClick={(e) => handleClick(e, 'home')}
-            className="inline-flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-3 cursor-pointer hover:opacity-95 transition-opacity"
           >
-            <div className="h-12 w-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">
-              A
-            </div>
+            <img
+              src={profileImage}
+              alt="Anjana B"
+              className="h-12 w-12 rounded-full object-cover border-2 border-primary/30 shadow-sm"
+            />
           </a>
 
           {/* Desktop Menu */}
