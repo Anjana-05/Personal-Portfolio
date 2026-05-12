@@ -58,9 +58,6 @@ function Achievements() {
           </div>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink">Achievements</h2>
           <div className="w-24 h-1 bg-gradient-primary rounded-full mt-4 mb-4 opacity-80" />
-          <p className="max-w-2xl text-sm sm:text-base text-muted leading-relaxed">
-            A timeline of selected wins, certifications, and leadership moments that show progression across academics, technical work, and public presentation.
-          </p>
         </div>
 
         <div className="mx-auto max-w-6xl space-y-8">
