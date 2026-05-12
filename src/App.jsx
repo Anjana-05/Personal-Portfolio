@@ -9,9 +9,9 @@ import Contact from './components/Contact.jsx'
 
 function App() {
   return (
-      <div className="min-h-screen bg-page text-text">
+      <div className="min-h-screen bg-page text-text overflow-x-hidden">
         <Navbar />
-        <main className="max-w-7xl mx-auto px-6">
+        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Hero />
           <About />
           <Skills />

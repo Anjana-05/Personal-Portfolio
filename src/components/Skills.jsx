@@ -24,16 +24,16 @@ function Skills() {
 
   return (
     <section id="skills" className="pt-24 pb-20 bg-page">
-      <div className="max-w-6xl mx-auto px-4 text-left">
-        <div className="mb-10 flex flex-col items-start gap-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-left">
+        <div className="mb-12 max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/20 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20 cursor-default">
             <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
             <span className="uppercase tracking-[0.18em] text-[0.68rem]">Tech stack</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4">
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink">
             Skills & <span className="text-primary">Technologies</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary rounded-full mb-8 opacity-80"></div>
+          <div className="w-24 h-1 bg-gradient-primary rounded-full mt-4 opacity-80" />
         </div>
         
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">

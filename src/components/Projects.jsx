@@ -152,19 +152,17 @@ function Projects() {
       id="projects"
       className="pt-24 pb-20 bg-page"
     >
-      <div className="text-left">
-        <div className="mb-10 flex items-center justify-between gap-4">
-          <div className="text-left">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/20 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20 cursor-default">
-              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
-              <span className="uppercase tracking-[0.18em] text-[0.68rem]">Selected work</span>
-            </div>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink text-left">Projects</h2>
-            <div className="w-24 h-1 bg-gradient-primary rounded-full mb-8 opacity-80"></div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-left">
+        <div className="mb-12 max-w-3xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/20 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20 cursor-default">
+            <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
+            <span className="uppercase tracking-[0.18em] text-[0.68rem]">Selected work</span>
           </div>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink">Projects</h2>
+          <div className="w-24 h-1 bg-gradient-primary rounded-full mt-4 opacity-80" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}

@@ -24,10 +24,22 @@ function Achievements() {
       featured: true,
     },
     {
-      year: '2024',
+      year: '2024-2025',
       title: 'Academic Excellence Award',
       category: 'Academics',
-      description: 'Received for strong academic performance and standing in the top 3% of the department.',
+      description: 'Received for strong academic performance and standing in the top 5% of the department.',
+      image: null,
+      imageClass: 'object-center',
+      featured: true,
+    },
+    {
+      year: '2025-2026',
+      title: 'Academic Excellence Award',
+      category: 'Academics',
+      description: 'Received for strong academic performance and standing in the top 5% of the department.',
+      image: null,
+      imageClass: 'object-center',
+      featured: true,
     },
   ]
 
@@ -53,34 +65,42 @@ function Achievements() {
         </div>
 
         <div className="mx-auto max-w-6xl space-y-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
             {featuredAchievements.map((item) => (
               <article
                 key={item.title}
                 className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-section transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10"
               >
-                <div className="relative mb-0 h-72 w-full overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 ${item.imageHoverClass || 'group-hover:scale-105'} ${item.imageClass || 'object-center'} ${item.imageTransformClass || ''}`}
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-page via-page/30 to-transparent" />
-                  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
-                    <span>{item.category}</span>
+                {item.image ? (
+                  <div className="relative mb-0 h-44 w-full overflow-hidden md:h-48">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 ${item.imageHoverClass || 'group-hover:scale-105'} ${item.imageClass || 'object-center'} ${item.imageTransformClass || ''}`}
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-page via-page/30 to-transparent" />
+                    <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+                      <span>{item.category}</span>
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <div className="relative mb-0 h-44 w-full overflow-hidden bg-surface flex items-center justify-center border-b border-border md:h-48">
+                    <div className="text-center text-muted">
+                      <div className="text-xs sm:text-sm font-medium">Image placeholder</div>
+                    </div>
+                  </div>
+                )}
 
-                <div className="p-4">
+                <div className="p-3 md:p-4">
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-xl sm:text-2xl font-semibold text-ink leading-tight flex-1">
+                    <h3 className="text-base sm:text-lg font-semibold text-ink leading-tight flex-1">
                       {item.title}
                     </h3>
-                    <span className="inline-flex shrink-0 items-center rounded-full border border-border bg-surface px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                    <span className="inline-flex shrink-0 items-center rounded-full border border-border bg-surface px-2 py-0.5 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-muted">
                       {item.year}
                     </span>
                   </div>
-                  <p className="text-sm sm:text-base text-text leading-relaxed">
+                  <p className="mt-2 text-xs sm:text-sm text-text leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -88,29 +108,31 @@ function Achievements() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-            {supportingAchievements.map((item) => (
-              <article
-                key={item.title}
-                className="rounded-2xl border border-border bg-section p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 md:col-span-2 md:max-w-md md:mx-auto xl:col-span-1 xl:col-start-2"
-              >
-                <div className="mb-4 flex items-center justify-between gap-3">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-2.5 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-primary">
-                    {item.category}
-                  </span>
-                  <span className="text-xs uppercase tracking-[0.18em] text-muted">{item.year}</span>
-                </div>
+          {supportingAchievements.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+              {supportingAchievements.map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-2xl border border-border bg-section p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 md:col-span-2 md:max-w-md md:mx-auto xl:col-span-1 xl:col-start-2"
+                >
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-2.5 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-primary">
+                      {item.category}
+                    </span>
+                    <span className="text-xs uppercase tracking-[0.18em] text-muted">{item.year}</span>
+                  </div>
 
-                <h3 className="text-base font-semibold text-ink leading-snug">
-                  {item.title}
-                </h3>
+                  <h3 className="text-base font-semibold text-ink leading-snug">
+                    {item.title}
+                  </h3>
 
-                <p className="mt-3 text-sm text-text leading-relaxed">
-                  {item.description}
-                </p>
-              </article>
-            ))}
-          </div>
+                  <p className="mt-3 text-sm text-text leading-relaxed">
+                    {item.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

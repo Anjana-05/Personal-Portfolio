@@ -113,16 +113,14 @@ function Contact() {
       id="contact"
       className="pt-24 pb-24 bg-page"
     >
-      <div className="text-left">
-        <div className="mb-10 flex items-center justify-between gap-4">
-          <div className="text-left">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/20 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20 cursor-default">
-              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
-              <span className="uppercase tracking-[0.18em] text-[0.68rem]">Let&apos;s talk</span>
-            </div>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink text-left">Contact</h2>
-            <div className="w-24 h-1 bg-gradient-primary rounded-full mb-8 opacity-80"></div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-left">
+        <div className="mb-12 max-w-3xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/20 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20 cursor-default">
+            <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
+            <span className="uppercase tracking-[0.18em] text-[0.68rem]">Let&apos;s talk</span>
           </div>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink">Contact</h2>
+          <div className="w-24 h-1 bg-gradient-primary rounded-full mt-4 opacity-80" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -308,11 +306,11 @@ function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary border border-primary text-white text-sm font-semibold tracking-wide hover:bg-primary/95 hover:scale-[1.01] transition-all duration-200 ease-out disabled:opacity-50 disabled:cursor-not-allowed rounded-full"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-linear-to-r from-primary to-primary-hover border border-transparent text-white text-sm font-semibold tracking-wide hover:scale-[1.01] hover:shadow-lg hover:shadow-primary/30 transition-all duration-200 ease-out disabled:opacity-50 disabled:cursor-not-allowed rounded-full"
               >
                 <span>{isSubmitting ? 'Sending...' : 'Submit'}</span>
                 {!isSubmitting && (
-                  <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary-hover text-white">
+                  <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-white/20 text-white">
                     {/* send icon */}
                     <svg
                       viewBox="0 0 24 24"

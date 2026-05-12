@@ -4,19 +4,17 @@ function About() {
       id="about"
       className="pt-24 pb-20 bg-page"
     >
-      <div className="text-left">
-        <div className="mb-6 flex items-center justify-between gap-4">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-sm font-semibold text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/20 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20 cursor-default">
-              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-              <span className="uppercase tracking-[0.18em] text-xs">Who I am</span>
-            </div>
-            <h2 className="mt-1 text-3xl sm:text-4xl font-bold text-ink">About Me</h2>
-            <div className="w-24 h-1 bg-gradient-primary rounded-full mb-8 opacity-80"></div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-left">
+        <div className="mb-12 max-w-3xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-sm font-semibold text-primary transition-all duration-300 hover:scale-105 hover:bg-primary/20 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/20 cursor-default">
+            <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+            <span className="uppercase tracking-[0.18em] text-xs">Who I am</span>
           </div>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-ink">About Me</h2>
+          <div className="w-24 h-1 bg-gradient-primary rounded-full mt-4 opacity-80" />
         </div>
 
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <div className="space-y-6">
             <p className="text-base text-text leading-relaxed text-justify">
               I&apos;m a passionate full-stack developer with a love for creating beautiful, 
@@ -85,7 +83,10 @@ function About() {
           </div>
 
           <div className="grid grid-cols-1 gap-4">
-            <div className="bg-surface/40 border border-primary/20 p-6 rounded-2xl transition-all duration-300 ease-out hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] hover:border-primary/50 group">
+            <div className="relative bg-surface/40 border border-primary/20 p-6 rounded-2xl transition-all duration-300 ease-out hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] hover:border-primary/50 group">
+              <div className="absolute top-4 right-4 inline-flex items-center rounded-full border border-[#8b5cf6]/50 bg-[#1b1226]/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#e9d5ff] shadow-[0_0_16px_rgba(168,85,247,0.25)] transition-all duration-300 group-hover:border-[#a855f7]/70 group-hover:shadow-[0_0_18px_rgba(168,85,247,0.35)]">
+                2023–2027
+              </div>
               <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/20 text-primary border border-primary/30 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                 <svg
                   viewBox="0 0 24 24"
@@ -102,10 +103,16 @@ function About() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2 text-ink transition-all duration-300 hover:translate-x-1">B.Tech Information Technology</h3>
-              <p className="text-text text-sm transition-all duration-300">Kongu Engineering College, CGPA: 9.15 (2023–2027)</p>
+              <p className="text-text text-sm mb-2 transition-all duration-300">Kongu Engineering College</p>
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center rounded-full border border-[#8b5cf6]/50 bg-[#1b1226]/85 px-3 py-1 text-xs font-semibold text-[#e9d5ff] shadow-[0_0_16px_rgba(168,85,247,0.25)] transition-all duration-300 hover:border-[#a855f7]/70 hover:shadow-[0_0_18px_rgba(168,85,247,0.35)]">CGPA: 9.15</span>
+              </div>
             </div>
 
-            <div className="bg-surface/40 border border-primary/20 p-6 rounded-2xl transition-all duration-300 ease-out hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] hover:border-primary/50 group">
+            <div className="relative bg-surface/40 border border-primary/20 p-6 rounded-2xl transition-all duration-300 ease-out hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] hover:border-primary/50 group">
+              <div className="absolute top-4 right-4 inline-flex items-center rounded-full border border-[#8b5cf6]/50 bg-[#1b1226]/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#e9d5ff] shadow-[0_0_16px_rgba(168,85,247,0.25)] transition-all duration-300 group-hover:border-[#a855f7]/70 group-hover:shadow-[0_0_18px_rgba(168,85,247,0.35)]">
+                2021–2022
+              </div>
               <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/20 text-primary border border-primary/30 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                 <svg
                   viewBox="0 0 24 24"
@@ -122,10 +129,16 @@ function About() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2 text-ink transition-all duration-300 hover:translate-x-1">HSC</h3>
-              <p className="text-text text-sm transition-all duration-300">Kongu Kalvi Nilayam Hr.Sec.School, 92.17% (2021–2022)</p>
+              <p className="text-text text-sm mb-2 transition-all duration-300">Kongu Kalvi Nilayam Hr.Sec.School</p>
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center rounded-full border border-[#8b5cf6]/50 bg-[#1b1226]/85 px-3 py-1 text-xs font-semibold text-[#e9d5ff] shadow-[0_0_16px_rgba(168,85,247,0.25)] transition-all duration-300 hover:border-[#a855f7]/70 hover:shadow-[0_0_18px_rgba(168,85,247,0.35)]">92.17%</span>
+              </div>
             </div>
 
-            <div className="bg-surface/40 border border-primary/20 p-6 rounded-2xl transition-all duration-300 ease-out hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] hover:border-primary/50 group">
+            <div className="relative bg-surface/40 border border-primary/20 p-6 rounded-2xl transition-all duration-300 ease-out hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] hover:border-primary/50 group">
+              <div className="absolute top-4 right-4 inline-flex items-center rounded-full border border-[#8b5cf6]/50 bg-[#1b1226]/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#e9d5ff] shadow-[0_0_16px_rgba(168,85,247,0.25)] transition-all duration-300 group-hover:border-[#a855f7]/70 group-hover:shadow-[0_0_18px_rgba(168,85,247,0.35)]">
+                2019–2020
+              </div>
               <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/20 text-primary border border-primary/30 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                 <svg
                   viewBox="0 0 24 24"
@@ -141,7 +154,10 @@ function About() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2 text-ink transition-all duration-300 hover:translate-x-1">SSLC</h3>
-              <p className="text-text text-sm transition-all duration-300">Kongu Kalvi Nilayam Hr.Sec.School, 86.6% (2019–2020)</p>
+              <p className="text-text text-sm mb-2 transition-all duration-300">Kongu Kalvi Nilayam Hr.Sec.School</p>
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center rounded-full border border-[#8b5cf6]/50 bg-[#1b1226]/85 px-3 py-1 text-xs font-semibold text-[#e9d5ff] shadow-[0_0_16px_rgba(168,85,247,0.25)] transition-all duration-300 hover:border-[#a855f7]/70 hover:shadow-[0_0_18px_rgba(168,85,247,0.35)]">86.6%</span>
+              </div>
             </div>
           </div>
         </div>

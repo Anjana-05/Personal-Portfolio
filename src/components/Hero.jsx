@@ -6,7 +6,7 @@ function Hero() {
       id="home"
       className="pt-24 pb-16 min-h-screen flex items-center bg-page"
     >
-      <div className="text-left">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 text-left">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
           {/* Left Column - Text Content */}
           <div className="lg:col-span-7 space-y-3 sm:space-y-4 animate-in animate-delay-100 text-left">
