@@ -10,8 +10,7 @@ function Achievements() {
       description: 'Recognized for presenting a strong technical paper and communicating the idea clearly during evaluation.',
       image: kratorqImage,
       imageClass: 'object-top',
-      imageTransformClass: 'scale-y-[1.14] origin-top',
-      imageHoverClass: 'group-hover:scale-x-[1.03] group-hover:scale-y-[1.17]',
+      imageTransformClass: 'scale-y-[1.08] origin-top',
       featured: true,
     },
     {
@@ -72,26 +71,26 @@ function Achievements() {
                 className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-section transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10"
               >
                 {item.image ? (
-                  <div className="relative mb-0 h-44 w-full overflow-hidden md:h-48">
+                  <div className="relative mb-0 h-48 w-full overflow-hidden bg-surface/40 md:h-48">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 ${item.imageHoverClass || 'group-hover:scale-105'} ${item.imageClass || 'object-center'} ${item.imageTransformClass || ''}`}
+                      className={`absolute inset-0 h-full w-full object-contain p-2 transition-transform duration-500 ${item.imageHoverClass || 'group-hover:scale-[1.02]'} ${item.imageClass || 'object-center'} ${item.imageTransformClass || ''}`}
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-page via-page/30 to-transparent" />
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-linear-to-t from-page/85 via-page/45 to-transparent md:h-24" />
                     <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
                       <span>{item.category}</span>
                     </div>
                   </div>
                 ) : (
-                  <div className="relative mb-0 h-44 w-full overflow-hidden bg-surface flex items-center justify-center border-b border-border md:h-48">
+                  <div className="relative mb-0 h-48 w-full overflow-hidden bg-surface flex items-center justify-center border-b border-border md:h-48">
                     <div className="text-center text-muted">
                       <div className="text-xs sm:text-sm font-medium">Image placeholder</div>
                     </div>
                   </div>
                 )}
 
-                <div className="p-3 md:p-4">
+                <div className="p-3 pt-2 md:p-4 md:pt-2">
                   <div className="flex items-start justify-between gap-4">
                     <h3 className="text-base sm:text-lg font-semibold text-ink leading-tight flex-1">
                       {item.title}
