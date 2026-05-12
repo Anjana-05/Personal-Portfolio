@@ -1,5 +1,5 @@
-import kratorqImage from "../assets/KRATORQ'24.jpg"
-import hackHorizonImage from "../assets/HackHorizon'24.jpg"
+import kratorqImage from "../assets/KRATORQ'24.JPG"
+import hackHorizonImage from "../assets/HACKHORIZON'24.jpg"
 
 function Achievements() {
   const achievements = [
